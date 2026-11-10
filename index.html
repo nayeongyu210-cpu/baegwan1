@@ -133,6 +133,90 @@ header{height:69px}.header-call{border-radius:2px}
   .bottom button{white-space:nowrap;min-width:0;font-size:clamp(11px,3.4vw,15px);padding:13px 4px;border-radius:14px;line-height:1.2}
 }
 @keyframes feedUpMobile{to{transform:translateY(-174px)}}
+
+/* Compact mobile composition matching desktop visual language */
+@media(max-width:680px){
+  /* tighter masthead, matching desktop's editorial hierarchy */
+  .head{gap:8px}
+  .brand img{width:133px;height:57px}
+  .header-call{padding:10px 13px;font-size:12px;white-space:nowrap}
+  .hamb{font-size:24px;padding:3px}
+  .hero{background:#f5f7f9}
+  .hero-in{gap:0}
+  .hero-copy{padding:27px 20px 16px}
+  .hero .eyebrow{font-size:11px;letter-spacing:.06em;color:#24517f}
+  .hero h1{font-size:clamp(32px,9.1vw,39px);line-height:1.15;margin:13px 0 13px}
+  .hero h1 span:not(.period){color:#145db6}
+  .hero .sub{font-size:13px;line-height:1.45}
+  .hero-price{margin-top:11px;font-size:12px;display:flex;align-items:baseline;gap:7px}
+  .hero-price strong{font-size:24px}
+  .hero-categories{font-size:11px;margin:9px 0 0;line-height:1.45}
+  .hero-buttons{margin-top:16px;gap:8px}
+  .hero-buttons .button{padding:11px 8px;min-height:43px;border-radius:999px;font-size:12px}
+  .hero-graphic{height:206px!important;aspect-ratio:auto!important;min-height:206px!important;position:relative;background:#0b65bf;overflow:hidden}
+  .hero-photograph{width:100%!important;height:100%!important;max-height:none!important;object-fit:cover;object-position:center 48%;filter:saturate(.88) blur(.1px)}
+  .photo-caption{bottom:4px;right:7px;padding:2px 5px;font-size:8px;opacity:.82}
+  .stats-bar{padding:14px 0 10px;background:#193047}
+  .stats-inner{gap:0}
+  .stat{gap:4px;padding:0 2px}
+  .stat strong{font-size:clamp(21px,5.8vw,28px);line-height:1.2;color:#c5a46a}
+  .stat span{font-size:10px}
+  .stats-demo{font-size:8px;margin:7px auto 0}
+  .promise-bar{border-bottom:1px solid #e2e7ee}
+  .promise-inner{grid-template-columns:repeat(3,minmax(0,1fr))}
+  .promise{padding:14px 8px 13px;min-height:82px}
+  .promise strong{font-size:11px;line-height:1.35}
+  .promise span{font-size:10px;line-height:1.45;margin-top:6px}
+  /* service section: denser photo grid rather than stacked blank bands */
+  .section{padding:43px 0}
+  .section-heading{margin-bottom:15px}
+  .section .eyebrow{font-size:10px;letter-spacing:.1em}
+  .section h2{font-size:27px;line-height:1.2;margin-top:7px}
+  .section .explain{margin-top:10px;font-size:12px;line-height:1.6}
+  .services.flip-services{gap:8px}
+  .flip-card{height:182px;border-radius:13px;box-shadow:0 3px 12px #16334c12}
+  .flip-front,.flip-back{border-radius:13px}
+  .flip-front img{height:75%}
+  .flip-title{height:25%;font-size:14px}
+  .flip-back{padding:12px;gap:6px}
+  .flip-back strong{font-size:17px}
+  .flip-back>span{font-size:11px;line-height:1.4}
+  .flip-back em{font-size:10px}
+  .band{padding:21px 0}
+  .band strong{font-size:19px;line-height:1.35}
+  .band p{font-size:11px;margin:8px 0 4px;line-height:1.55}
+  .band .button{margin-top:12px;border-radius:999px;font-size:13px;padding:11px}
+  .regional{gap:11px}
+  .regional>div:first-child p{font-size:13px;line-height:1.55;margin:8px 0}
+  .hint{margin-top:12px;font-size:11px;line-height:1.5}
+  .region-box{padding:16px;border-radius:15px}
+  .region-box label{margin-bottom:10px;font-size:13px}
+  .selectors select{padding:11px;font-size:14px}
+  .region-box .button{font-size:13px;padding:12px;border-radius:999px}
+  .region-note{font-size:10px!important;line-height:1.45!important}
+  /* all lower sections are close together, with richer contrast */
+  .price-guide{gap:12px}
+  .price-guide p{font-size:13px;line-height:1.7}
+  .price-row{padding:14px 2px;font-size:12px}
+  .live-pill{font-size:12px}
+  .siren{font-size:21px}
+  .feed{margin-top:15px}
+  .feed-item{font-size:13px}
+  .case,.review{flex-basis:78%}
+  .case-visual{height:165px}
+  .case-body{padding:15px}
+  .case-body strong{font-size:17px}
+  .case-body p{font-size:12px;line-height:1.5}
+  .review{padding:18px;min-height:177px}
+  .review p{font-size:13px;line-height:1.55;min-height:67px}
+  .controls button{width:34px;height:34px;font-size:19px}
+  .faq-list{margin-top:15px}
+  .faq-list summary{font-size:13px;padding:17px 12px}
+  .faq-list p{font-size:12px;padding:0 12px 17px}
+  .footer{padding-top:30px}
+  .bottom{box-shadow:0 -3px 13px #0e2e4822}
+}
+@media(max-width:360px){.hero h1{font-size:31px}.hero-categories{font-size:10px}.hero-graphic{height:190px!important;min-height:190px!important}.stat strong{font-size:20px}.flip-card{height:167px}}
 </style>
 </head>
 <body>
