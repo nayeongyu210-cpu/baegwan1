@@ -76,6 +76,63 @@ header{height:69px}.header-call{border-radius:2px}
 @keyframes teamZoom{from{transform:scale(1)}to{transform:scale(1.04)}}@keyframes flash{50%{opacity:.35;filter:saturate(.6)}}@keyframes appear{from{opacity:0;transform:translateY(8px)}to{opacity:1;transform:translateY(0)}}
 @media(max-width:680px){.hero-in{background:#f9fafb}.hero-copy{padding-bottom:18px}.hero h1{font-size:clamp(36px,10.5vw,48px);line-height:1.18}.hero .sub{font-size:14px;line-height:1.8}.hero-graphic{min-height:278px;height:278px;background:#0868ca}.hero-photograph{width:92%;max-height:78%}.photo-caption{font-size:9px}.hero-price{margin-top:17px}.hero-categories{font-size:12px}.hero-buttons .button{font-size:13px}.stats-bar{padding:19px 0 14px}.stat strong{font-size:26px}.stat span{font-size:11px}.stats-demo{font-size:9px}.flip-services{grid-template-columns:repeat(2,minmax(0,1fr));gap:10px}.flip-card{height:206px}.flip-title{font-size:15px;padding:0 10px}.flip-back{padding:14px 12px;gap:7px}.flip-back strong{font-size:19px}.flip-back>span{font-size:12px}.flip-back em{font-size:11px}.flip-back small{font-size:10px}.live-pill{font-size:13px}.siren{font-size:23px}}
 @media(prefers-reduced-motion:reduce){.hero-photograph,.siren{animation:none!important}.flip-inner{transition:none!important}}
+
+/* Mobile-only corrections from screen recording — desktop unchanged */
+@media(max-width:680px){
+  html,body{max-width:100%;overflow-x:clip}
+  .wrap{width:calc(100% - 34px)}
+  .hero{overflow:visible}
+  .hero-in{width:100%;display:flex;flex-direction:column;gap:0;padding:0}
+  .hero-copy{width:100%;padding:28px 18px 26px}
+  .hero .eyebrow{font-size:12px;line-height:1.4}
+  .hero h1{font-size:clamp(32px,9.2vw,43px);line-height:1.23;letter-spacing:-.06em;margin:15px 0 15px;overflow-wrap:keep-all}
+  .hero h1 span{word-break:keep-all}
+  .hero .sub{font-size:14px;line-height:1.65}
+  .hero-price{font-size:14px;margin-top:14px}
+  .hero-price strong{font-size:22px}
+  .hero-categories{margin-top:12px;font-size:12px;line-height:1.6}
+  .hero-buttons{margin-top:20px;gap:9px}
+  .hero-buttons .button{font-size:13px;min-width:0;min-height:46px;white-space:nowrap;gap:4px;padding:12px 9px;justify-content:center}
+  .hero-graphic{width:100%;height:auto!important;min-height:0!important;aspect-ratio:1536/866;margin:0;background:#e4edf4;border:0}
+  .hero-photograph{position:absolute!important;inset:0!important;width:100%!important;height:100%!important;max-height:none!important;object-fit:cover;object-position:center center;animation:none;filter:saturate(.9) blur(.2px)}
+  .photo-caption{bottom:6px;right:9px;background:#ffffffd9;color:#31516b;padding:3px 6px;font-size:9px}
+  .stats-bar{padding:16px 0 11px}
+  .stat strong{font-size:clamp(21px,6vw,27px);white-space:nowrap}
+  .stat span{font-size:10px;line-height:1.5}
+  .stats-demo{margin-top:7px}
+  .promise-inner{grid-template-columns:repeat(3,minmax(0,1fr))}
+  .promise{min-width:0;padding:14px 7px}
+  .promise strong{font-size:11px}
+  .promise span{font-size:10px}
+  .section{padding:54px 0}
+  .section-heading{margin-bottom:20px}
+  .section h2{font-size:29px}
+  .services.flip-services{gap:10px}
+  .flip-card{height:196px;min-width:0}
+  .flip-front img{height:74%;object-fit:cover}
+  .flip-title{height:26%;font-size:15px}
+  .flip-back{padding:12px}
+  .flip-back strong{font-size:18px}
+  .flip-back>span{font-size:11px}
+  .band{padding:22px 0}
+  .band strong{font-size:20px}
+  .regional{gap:14px}
+  .region-box{padding:16px}
+  .rail-head{align-items:center;gap:8px}
+  .rail-head h2{font-size:27px}
+  .feed{height:174px;margin-top:16px}
+  .feed-item{height:58px}
+  .feed-list{animation:feedUpMobile 15s linear infinite}
+  .case,.review{flex-basis:84%}
+  .case-body{padding:17px}
+  .review{min-height:185px}
+  .review p{font-size:14px;min-height:70px}
+  .footer{padding:35px 0 112px}
+  .bottom{padding:8px 10px calc(8px + env(safe-area-inset-bottom))}
+  .bottom-in{gap:7px;grid-template-columns:7fr 3fr}
+  .bottom button{white-space:nowrap;min-width:0;font-size:clamp(11px,3.4vw,15px);padding:13px 4px;border-radius:14px;line-height:1.2}
+}
+@keyframes feedUpMobile{to{transform:translateY(-174px)}}
 </style>
 </head>
 <body>
