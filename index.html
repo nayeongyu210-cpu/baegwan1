@@ -681,6 +681,20 @@ html body .review p{font-size:16px;line-height:1.8}
 .review-pause{padding:8px 11px;font-size:12px}
 }
 @media(prefers-reduced-motion:reduce){.review-track,html body .feed-list{animation:none!important}.review-marquee{overflow-x:auto}}
+</style><style id="site-seamless-header">
+html body header{background:#edf7ff!important;border-bottom:0!important;box-shadow:none!important;backdrop-filter:none!important;transition:background .2s,box-shadow .2s}
+html body .head{background:transparent!important;border:0!important}
+html body .brand{mix-blend-mode:multiply}
+html body .hero{border-top:0!important;background:linear-gradient(155deg,#edf7ff 0%,#f5faff 28%,#fff 54%,#e7f3ff 100%)!important}
+html body .hero-in{background:transparent!important;padding-top:20px!important}
+html body.header-scrolled header{background:#fffffff5!important;box-shadow:0 2px 14px #0b416310!important;backdrop-filter:blur(12px)!important}
+.review-arrows{display:flex;gap:9px;align-items:center}
+.review-arrows button{display:grid;place-items:center;width:43px;height:43px;padding:0;border:1px solid #b9d2eb;border-radius:50%;background:#fff;color:#0758aa;font-size:20px;font-weight:700;line-height:1;transition:background .15s,color .15s,transform .15s}
+.review-arrows button:hover{background:#075fbd;color:#fff}
+.review-arrows button:active{transform:scale(.94)}
+.review-arrows button:focus-visible{outline:3px solid #d8ac3e;outline-offset:3px}
+@media(max-width:680px){html body .hero-in{padding-top:16px!important}.review-arrows{gap:7px}.review-arrows button{width:35px;height:35px;font-size:17px}}
+@media(prefers-reduced-motion:reduce){html body header,.review-arrows button{transition:none}}
 </style></head>
 <body>
 <header><div class="wrap head">
@@ -701,7 +715,7 @@ html body .review p{font-size:16px;line-height:1.8}
 <div class="rail" id="casesRail"><article class="case"><div class="case-visual"><img loading="lazy" src="https://images.pexels.com/photos/16509869/pexels-photo-16509869.jpeg?auto=compress&amp;cs=tinysrgb&amp;w=750" alt="배관 수리 작업 참고 사진"></div><div class="case-body"><strong>싱크대 배수관 점검</strong><p>배수 불량 원인을 진단하고 작업 방법을 설명합니다.</p></div></article>
 <article class="case"><div class="case-visual"><img loading="lazy" src="https://images.pexels.com/photos/12880833/pexels-photo-12880833.jpeg?auto=compress&amp;cs=tinysrgb&amp;w=750" alt="배관 현장 작업 참고 사진"></div><div class="case-body"><strong>배관 내시경 점검</strong><p>배관 내부 상태를 확인하는 진단 과정입니다.</p></div></article>
 <article class="case"><div class="case-visual"><img loading="lazy" src="https://images.pexels.com/photos/29931974/pexels-photo-29931974.jpeg?auto=compress&amp;cs=tinysrgb&amp;w=750" alt="관로 점검 참고 사진"></div><div class="case-body"><strong>하수구 관로 정비</strong><p>배관 상태에 맞춰 세척 및 정비 작업을 진행합니다.</p></div></article></div></div></section>
-<section id="reviews" class="section"><div class="wrap"><div class="rail-head"><div><div class="eyebrow">CUSTOMER VOICE</div><h2>고객 후기</h2></div><button type="button" class="review-pause" aria-pressed="false" onclick="toggleReviewMotion(this)">일시정지</button></div><div class="review-marquee" id="reviewMarquee"><div class="review-track"><div class="review-set"><article class="review"><span class="review-work-label">작업 내용</span><h3>작업 전 안내</h3><div class="stars" aria-label="별점 5점">★★★★★</div><p>설명을 먼저 해주셔서 어떤 작업을 하는지 이해하기 편했어요~</p></article><article class="review"><span class="review-work-label">작업 내용</span><h3>싱크대 배수 점검</h3><div class="stars" aria-label="별점 5점">★★★★★</div><p>싱크대 물이 안 내려가서 문의했는데 필요한 부분부터 봐주셨어요 👍</p></article><article class="review"><span class="review-work-label">작업 내용</span><h3>작업 후 점검</h3><div class="stars" aria-label="별점 5점">★★★★★</div><p>작업하고 물 내리는 것까지 확인해주셔서 괜찮았습니다 ^^</p></article></div><div class="review-set" aria-hidden="true" inert><article class="review"><span class="review-work-label">작업 내용</span><h3>작업 전 안내</h3><div class="stars" aria-label="별점 5점">★★★★★</div><p>설명을 먼저 해주셔서 어떤 작업을 하는지 이해하기 편했어요~</p></article><article class="review"><span class="review-work-label">작업 내용</span><h3>싱크대 배수 점검</h3><div class="stars" aria-label="별점 5점">★★★★★</div><p>싱크대 물이 안 내려가서 문의했는데 필요한 부분부터 봐주셨어요 👍</p></article><article class="review"><span class="review-work-label">작업 내용</span><h3>작업 후 점검</h3><div class="stars" aria-label="별점 5점">★★★★★</div><p>작업하고 물 내리는 것까지 확인해주셔서 괜찮았습니다 ^^</p></article></div></div></div></div></section>
+<section id="reviews" class="section"><div class="wrap"><div class="rail-head"><div><div class="eyebrow">CUSTOMER VOICE</div><h2>고객 후기</h2></div><div class="review-arrows" aria-label="후기 이동"><button type="button" aria-label="이전 후기" onclick="stepReview(-1)">〈</button><button type="button" aria-label="다음 후기" onclick="stepReview(1)">〉</button></div></div><div class="review-marquee" id="reviewMarquee"><div class="review-track"><div class="review-set"><article class="review"><span class="review-work-label">작업 내용</span><h3>작업 전 안내</h3><div class="stars" aria-label="별점 5점">★★★★★</div><p>설명을 먼저 해주셔서 어떤 작업을 하는지 이해하기 편했어요~</p></article><article class="review"><span class="review-work-label">작업 내용</span><h3>싱크대 배수 점검</h3><div class="stars" aria-label="별점 5점">★★★★★</div><p>싱크대 물이 안 내려가서 문의했는데 필요한 부분부터 봐주셨어요 👍</p></article><article class="review"><span class="review-work-label">작업 내용</span><h3>작업 후 점검</h3><div class="stars" aria-label="별점 5점">★★★★★</div><p>작업하고 물 내리는 것까지 확인해주셔서 괜찮았습니다 ^^</p></article></div><div class="review-set" aria-hidden="true" inert><article class="review"><span class="review-work-label">작업 내용</span><h3>작업 전 안내</h3><div class="stars" aria-label="별점 5점">★★★★★</div><p>설명을 먼저 해주셔서 어떤 작업을 하는지 이해하기 편했어요~</p></article><article class="review"><span class="review-work-label">작업 내용</span><h3>싱크대 배수 점검</h3><div class="stars" aria-label="별점 5점">★★★★★</div><p>싱크대 물이 안 내려가서 문의했는데 필요한 부분부터 봐주셨어요 👍</p></article><article class="review"><span class="review-work-label">작업 내용</span><h3>작업 후 점검</h3><div class="stars" aria-label="별점 5점">★★★★★</div><p>작업하고 물 내리는 것까지 확인해주셔서 괜찮았습니다 ^^</p></article></div></div></div></div></section>
 <section id="faq" class="section soft"><div class="wrap"><div class="eyebrow">QUESTIONS & ANSWERS</div><h2>자주 묻는 질문</h2><div class="faq-list"><details><summary>출장비가 발생하나요?</summary><p>작업을 진행하는 경우 출장비는 무료입니다. 작업을 진행하지 않을 경우의 방문·진단 비용은 상담 시 확인해 주세요.</p></details><details><summary>작업 비용은 얼마인가요?</summary><p>기본 작업 비용은 50,000원부터이며, 막힘 원인과 위치, 사용 장비 및 작업 범위에 따라 달라질 수 있습니다. 작업 전 비용을 안내합니다.</p></details><details><summary>야간이나 공휴일에도 상담할 수 있나요?</summary><p>365일 24시간 상담을 안내하고 있습니다. 실제 방문 가능 일정은 지역과 현장 상황에 따라 확인합니다.</p></details><details><summary>추가 비용이 발생할 수 있나요?</summary><p>내시경 점검, 고압세척, 부품 교체 등 별도 작업이 필요한 경우 사전에 내용과 비용을 안내하고 동의 후 진행합니다.</p></details></div></div></section></main>
 <footer class="footer"><div class="wrap"><strong>배관1번가</strong><p>정직한 진단과 투명한 과정 안내는 배관일번가가 지켜나가는 가장 중요한 약속입니다.</p><p>변기·싱크대·하수구 막힘 · 누수탐지 · 고압세척 · 동파해빙</p></div></footer>
 <div class="bottom"><div class="bottom-in"><button class="phone" onclick="callNow()"><span class="contact-icon" aria-hidden="true">☎</span><span class="contact-text"><strong>빠른 전화 연결</strong><small>(24H 운영)</small></span></button><button class="chat" onclick="chatNow()"><img class="kakao-icon" src="https://cdn.simpleicons.org/kakaotalk/191919" alt="" aria-hidden="true"><span class="contact-text"><strong>간편 채팅 상담</strong><small>(1:1 문의)</small></span></button></div></div><div class="toast" id="toast" role="status"></div>
@@ -787,12 +801,24 @@ document.querySelectorAll('#nav a').forEach(a=>a.addEventListener('click',()=>do
   observer.observe(region);
  }else play();
 })();
-function toggleReviewMotion(button){
+function stepReview(direction){
  const marquee=document.getElementById('reviewMarquee');
- const paused=marquee.classList.toggle('paused');
- button.setAttribute('aria-pressed',String(paused));
- button.textContent=paused?'다시 재생':'일시정지';
+ const track=marquee.querySelector('.review-track');
+ const cards=marquee.querySelector('.review-set').children.length;
+ const animation=track.getAnimations()[0];
+ if(animation){
+  const duration=Number(animation.effect.getTiming().duration)||64000;
+  const position=Number(animation.currentTime)||0;
+  animation.currentTime=((position+direction*duration/cards)%duration+duration)%duration;
+ }else{
+  const card=track.querySelector('.review');
+  marquee.scrollBy({left:direction*(card.getBoundingClientRect().width+18),behavior:'smooth'});
+ }
 }
+(function(){
+ function syncHeader(){document.body.classList.toggle('header-scrolled',window.scrollY>32);}
+ syncHeader();window.addEventListener('scroll',syncHeader,{passive:true});
+})();
 
 </script>
 </body></html>
