@@ -1596,9 +1596,9 @@ function stepReview(direction){
   const location=document.createElement('span');location.className='feed-location';
   const primary=document.createElement('strong'),detail=document.createElement('small');
   primary.textContent=record?[record.city,record.district].filter(Boolean).join(' '):'—';
-  detail.textContent=record?(record.dong||'구·동 정보 미등록'):'';
+  detail.textContent=record?(record.dong||''):'';if(!detail.textContent)detail.hidden=true;
   location.append(primary,detail);
-  const work=document.createElement('strong');work.className='feed-problem';work.textContent=record?record.work:'등록된 접수 내역 없음';
+  const work=document.createElement('strong');work.className='feed-problem';work.textContent=record?record.work:'—';
   const state=document.createElement('span');state.className='feed-state';state.textContent=record?record.state:'—';
   row.append(location,work,state);host.append(row);
  }
