@@ -508,9 +508,10 @@ document.querySelectorAll('#nav a').forEach(a=>a.addEventListener('click',()=>do
   let state=2166136261;
   for(const ch of dateKey)state=Math.imul(state^ch.charCodeAt(0),16777619)>>>0;
   function random(){state=(Math.imul(state,1664525)+1013904223)>>>0;return state/4294967296;}
+  const dailyTarget=560+Math.floor(random()*40);
   const steps=[];let total=0,elapsed=0;
-  while(total<127){
-   const amount=Math.min(1+Math.floor(random()*3),127-total);
+  while(total<dailyTarget){
+   const amount=Math.min(1+Math.floor(random()*3),dailyTarget-total);
    elapsed+=12+Math.floor(random()*20);
    steps.push({position:elapsed,amount});total+=amount;
   }
