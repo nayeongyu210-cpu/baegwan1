@@ -2314,4 +2314,11 @@ const host=q('#intakeRows'),feed=host&&host.parentElement,feedList=feed&&feed.qu
  html body header .brand img{width:210px!important;max-width:210px!important;height:112px!important;max-height:112px!important;transform:scale(1.16)!important}
  html body .hero-kicker-row{justify-content:flex-start!important;gap:12px!important}
 }
-</style></body></html>
+</style><script id="intake-list-final-fix">
+(()=>{const host=document.querySelector('#intakeRows');if(!host)return;const list=host.parentElement,feed=list&&list.parentElement;if(!list||!feed)return;const mobile=window.matchMedia('(max-width:760px)').matches,rowHeight=mobile?80:78,visibleHeight=rowHeight*5;
+feed.style.setProperty('height',visibleHeight+'px','important');feed.style.setProperty('min-height',visibleHeight+'px','important');feed.style.setProperty('overflow','hidden','important');
+list.style.setProperty('height','auto','important');list.style.setProperty('min-height','0','important');list.style.setProperty('overflow','visible','important');list.style.setProperty('display','flex','important');list.style.setProperty('flex-direction','column','important');list.style.setProperty('animation',(mobile?'intakeRowsRiseMobile':'intakeRowsRiseDesktop')+' 34s linear infinite','important');list.style.setProperty('will-change','transform','important');
+const fitRows=(set)=>{set.style.setProperty('height',visibleHeight+'px','important');set.style.setProperty('min-height',visibleHeight+'px','important');set.style.setProperty('flex','0 0 auto','important');set.style.setProperty('display','flex','important');set.style.setProperty('flex-direction','column','important');for(const row of set.querySelectorAll('.ticker-item')){row.style.setProperty('height',rowHeight+'px','important');row.style.setProperty('min-height',rowHeight+'px','important');row.style.setProperty('max-height',rowHeight+'px','important');row.style.setProperty('box-sizing','border-box','important');}};
+let clone=list.querySelector(':scope > .feed-set-loop');if(!clone){clone=document.createElement('div');clone.className='feed-set feed-set-loop';clone.setAttribute('aria-hidden','true');list.append(clone);}
+const sync=()=>{fitRows(host);clone.replaceChildren(...[...host.children].map(row=>row.cloneNode(true)));fitRows(clone);};sync();new MutationObserver(sync).observe(host,{childList:true});})();
+</script></body></html>
