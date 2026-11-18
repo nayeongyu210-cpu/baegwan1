@@ -2307,4 +2307,11 @@ const host=q('#intakeRows'),feed=host&&host.parentElement,feedList=feed&&feed.qu
 }
 </style><script id="logo-badge-balance-script">
 (()=>{const q=(s,r=document)=>r.querySelector(s),copy=q('.home-lead-copy'),kicker=q('.home-lead-kicker'),badge=q('.home-lead-visual .home-lead-badge');if(copy&&kicker&&badge){let row=q('.hero-kicker-row',copy);if(!row){row=document.createElement('div');row.className='hero-kicker-row';kicker.before(row);}row.append(kicker,badge);}})();
-</script></body></html>
+</script><style id="logo-size-position-tune">
+@media(min-width:761px){
+ html body header .head{grid-template-columns:212px minmax(0,1fr) 248px!important}
+ html body header .brand{width:212px!important}
+ html body header .brand img{width:210px!important;max-width:210px!important;height:112px!important;max-height:112px!important;transform:scale(1.16)!important}
+ html body .hero-kicker-row{justify-content:flex-start!important;gap:12px!important}
+}
+</style></body></html>
