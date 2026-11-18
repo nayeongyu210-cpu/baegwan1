@@ -1977,10 +1977,10 @@ html body #reviews .rail-head{margin-bottom:18px!important}
 html body #reviewMarquee{overflow:hidden!important}
 html body .review-track{animation:reviewLeft 150s linear infinite!important}
 html body .review-set{gap:12px!important}
-html body .review-set .review{min-width:244px!important;width:244px!important;min-height:206px!important;height:206px!important;padding:16px!important;border:1px solid #e0e5ed!important;border-radius:12px!important;box-shadow:none!important}
+html body .review-set .review{flex:0 0 244px!important;min-width:244px!important;width:244px!important;max-width:244px!important;box-sizing:border-box!important;min-height:188px!important;height:188px!important;padding:14px!important;border:1px solid #e0e5ed!important;border-radius:12px!important;box-shadow:none!important;display:flex!important;flex-direction:column!important;align-items:flex-start!important;justify-content:flex-start!important;overflow:hidden!important}
 html body .review-work-label{font-size:11px!important}
 html body .review-set .review h3{font-size:15px!important;margin:5px 0 8px!important}
-html body .review-set .review p{font-size:13.5px!important;line-height:1.55!important;display:-webkit-box!important;-webkit-box-orient:vertical!important;-webkit-line-clamp:5!important;overflow:hidden!important;margin:0!important}
+html body .review-set .review p{font-size:13px!important;line-height:1.5!important;display:-webkit-box!important;-webkit-box-orient:vertical!important;-webkit-line-clamp:4!important;overflow:hidden!important;margin:0!important}
 html body .review-author{font-size:13px!important;margin-top:auto!important;padding-top:9px!important}
 @media(max-width:1000px){
  html body header .head{gap:16px!important}
@@ -2041,8 +2041,8 @@ html body .review-author{font-size:13px!important;margin-top:auto!important;padd
  .ticker-time{display:none}
  html body #intake .intake-table-head span:last-child{display:none}
  html body #reviews{padding:38px 0!important}
- html body .review-set .review{min-width:76vw!important;width:76vw!important;max-width:260px!important;height:194px!important;min-height:194px!important;padding:13px!important}
- html body .review-set .review p{font-size:12.5px!important;-webkit-line-clamp:5!important}
+ html body .review-set .review{flex:0 0 min(76vw,260px)!important;min-width:0!important;width:min(76vw,260px)!important;max-width:260px!important;height:184px!important;min-height:184px!important;padding:13px!important}
+ html body .review-set .review p{font-size:12.5px!important;-webkit-line-clamp:4!important}
 }
 @media(prefers-reduced-motion:reduce){.ticker-status.done .ticker-dot{animation:none!important}.review-track{animation:none!important}}
 </style><script id="reference-layout-script">
