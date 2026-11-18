@@ -2188,4 +2188,88 @@ const region=document.querySelector('#region');if(region){const h=region.querySe
  html body #intake .intake-table .feed-list{animation:intakeFiveRise 38s cubic-bezier(.4,0,.2,1) infinite!important}
 }</style><style id="service-card-visibility-fix">
 html body #services .service.motion-ready{opacity:1!important;transform:translateY(0)!important;visibility:visible!important}
-</style></body></html>
+</style><style id="requested-layout-final">
+@media(min-width:761px){
+ html body .home-lead-inner{align-items:stretch!important;min-height:0!important;grid-template-columns:minmax(0,1fr) minmax(0,1fr)!important;gap:38px!important;padding:36px 0 38px!important}
+ html body .home-lead-copy{display:flex!important;flex-direction:column!important;justify-content:center!important}
+ html body .home-lead-visual{height:520px!important;min-height:520px!important;align-self:stretch!important;overflow:hidden!important}
+ html body .hero-work-photo{width:100%!important;height:100%!important;min-height:520px!important;max-height:520px!important;object-fit:cover!important;object-position:center 38%!important}
+ html body .home-lead-actions{gap:14px!important;margin-top:26px!important}
+ html body .home-lead-call,html body .home-lead-area{width:calc(50% - 7px)!important;min-height:72px!important;justify-content:center!important}
+ html body .stats-bar{width:100%!important;margin:16px 0 0!important;padding:0!important;background:transparent!important}
+ html body .stats-inner{display:block!important;width:100%!important;max-width:none!important;margin:0!important}
+ html body .daily-counter-card{width:100%!important;min-height:82px!important;padding:12px 18px!important;border:1px solid #cbdaf0!important;border-radius:12px!important;background:#fff!important;box-shadow:0 4px 14px #102a4a0a!important}
+ html body .daily-counter-value strong{min-width:38px!important;height:44px!important;font-size:30px!important}
+}
+html body .ref-feature-strip{display:none!important}
+html body #teamPromise{padding:48px 0 26px!important;background:#fff!important}
+html body .team-promise-inner{display:block!important;max-width:1240px!important}
+html body .team-promise-copy{max-width:none!important;margin:0!important;text-align:left!important}
+html body .team-promise-copy h2{font-size:clamp(34px,3.4vw,46px)!important;line-height:1.2!important;margin:0 0 12px!important;color:#142b49!important}
+html body .team-promise-copy p{max-width:850px!important;margin:0!important;font-size:17px!important;line-height:1.65!important;color:#53667e!important}
+html body .team-promises{grid-template-columns:repeat(4,minmax(0,1fr))!important;gap:12px!important;margin:26px 0 0!important}
+html body .team-promises span{min-height:108px!important;display:flex!important;flex-direction:column!important;align-items:flex-start!important;justify-content:center!important;gap:7px!important;padding:18px 20px!important;border:1px solid #e0e7f0!important;border-radius:12px!important;background:#f6f8fb!important;text-align:left!important}
+html body .team-promises span strong{font-size:20px!important;line-height:1.3!important;color:#142b49!important;font-weight:800!important}
+html body .team-promises span small{font-size:15px!important;line-height:1.45!important;color:#60728a!important;font-weight:500!important}
+html body #teamGroupPhoto{padding:8px 0 48px!important;background:#fff!important}
+html body #teamGroupPhoto .team-group-photo-frame{width:min(920px,calc(100% - 64px))!important;max-width:920px!important;height:auto!important;min-height:0!important;margin:0 auto!important;border:1px solid #e2e8f0!important;border-radius:12px!important;overflow:hidden!important;background:#f7f8fa!important}
+html body #teamGroupPhoto .team-group-photo-frame img{display:block!important;width:100%!important;height:auto!important;max-height:390px!important;object-fit:contain!important;object-position:center!important}
+html body #cost .price-overview-heading{display:block!important;margin-bottom:24px!important}
+html body #cost .price-overview-heading h2{margin:8px 0 0!important;font-size:clamp(34px,3.2vw,44px)!important}
+html body #cost .price-lead{max-width:850px!important;margin:12px 0 0!important;font-size:17px!important;line-height:1.6!important;color:#63748b!important}
+html body .price-content-grid{display:grid!important;grid-template-columns:minmax(0,1.65fr) minmax(300px,.85fr)!important;gap:20px!important;align-items:stretch!important}
+html body .price-content-grid .price-table-shell{min-width:0!important}
+html body .price-reasons{padding:28px!important;border:1px solid #d9e2ee!important;border-radius:16px!important;background:#f5f7fa!important;display:flex!important;flex-direction:column!important}
+html body .price-reasons h3{font-size:26px!important;line-height:1.35!important;margin:0 0 10px!important;color:#142b49!important}
+html body .price-reasons>p{margin:0 0 22px!important;font-size:16px!important;line-height:1.65!important;color:#61738a!important}
+html body .price-reasons ul{list-style:none!important;padding:0!important;margin:0!important;display:grid!important;gap:12px!important}
+html body .price-reasons li{padding:13px 14px!important;border:1px solid #e0e7ef!important;border-radius:9px!important;background:#fff!important;font-size:15px!important;line-height:1.45!important;color:#283e5a!important;font-weight:650!important}
+html body .price-reasons .price-call-note{margin-top:auto!important;padding-top:22px!important;color:#2358a4!important;font-size:15px!important;font-weight:750!important}
+html body .intake-table .feed{height:440px!important;min-height:440px!important;overflow:hidden!important}
+html body .intake-table .feed-list{display:flex!important;flex-direction:column!important;animation:intakeRowsRise 34s linear infinite!important;will-change:transform}
+html body .intake-table:hover .feed-list{animation-play-state:running!important}
+html body .intake-table .feed-set{flex:0 0 auto!important}
+html body .intake-table .feed-item{box-sizing:border-box!important;height:88px!important;min-height:88px!important;max-height:88px!important}
+@keyframes intakeRowsRise{from{transform:translateY(0)}to{transform:translateY(-440px)}}
+@media(max-width:980px){
+ html body .price-content-grid{grid-template-columns:1fr!important}
+ html body .price-reasons{min-height:0!important}
+}
+@media(max-width:760px){
+ html body .home-lead-inner{align-items:initial!important}
+ html body .home-lead-visual{height:340px!important;min-height:340px!important}
+ html body .hero-work-photo{height:340px!important;min-height:340px!important;max-height:340px!important}
+ html body .home-lead-actions{display:grid!important;grid-template-columns:1fr 1fr!important;gap:10px!important}
+ html body .home-lead-call,html body .home-lead-area{width:100%!important;min-width:0!important}
+ html body .stats-bar{margin-top:12px!important}
+ html body .daily-counter-card{min-height:76px!important;padding:10px 12px!important}
+ html body .daily-counter-title{font-size:15px!important}
+ html body .daily-counter-value strong{min-width:30px!important;height:38px!important;font-size:24px!important}
+ html body #teamPromise{padding:34px 0 20px!important}
+ html body .team-promise-copy h2{font-size:30px!important}
+ html body .team-promise-copy p{font-size:15px!important}
+ html body .team-promises{grid-template-columns:repeat(2,minmax(0,1fr))!important;gap:9px!important;margin-top:18px!important}
+ html body .team-promises span{min-height:92px!important;padding:13px!important}
+ html body .team-promises span strong{font-size:16px!important}
+ html body .team-promises span small{font-size:13px!important}
+ html body #teamGroupPhoto .team-group-photo-frame{width:calc(100% - 36px)!important}
+ html body #teamGroupPhoto .team-group-photo-frame img{max-height:260px!important}
+ html body .price-reasons{padding:20px!important}
+ html body .price-reasons h3{font-size:22px!important}
+ html body .intake-table-head{grid-template-columns:1.15fr 1fr 90px!important;gap:8px!important;padding:12px!important}
+ html body .intake-table .feed{height:400px!important;min-height:400px!important}
+ html body .intake-table .feed-item{height:80px!important;min-height:80px!important;max-height:80px!important;padding:10px 12px!important;grid-template-columns:minmax(0,1.15fr) minmax(0,1fr) 82px!important;gap:8px!important}
+ html body .intake-table .feed-list{animation:intakeRowsRiseMobile 34s linear infinite!important}
+ @keyframes intakeRowsRiseMobile{from{transform:translateY(0)}to{transform:translateY(-400px)}}
+}
+</style><script id="requested-layout-final-script">
+(()=>{const q=(s,r=document)=>r.querySelector(s);
+const hero=q('.home-lead'),copy=q('.home-lead-copy'),actions=q('.home-lead-actions'),stats=q('.stats-bar');
+if(hero&&copy&&actions&&stats)actions.insertAdjacentElement('afterend',stats);
+q('.ref-feature-strip')?.remove();
+const promise=q('#teamPromise');if(promise){const title=q('.team-promise-copy h2',promise);if(title)title.textContent='배관1번가의 장점';const p=q('.team-promise-copy p',promise);if(p)p.textContent='정직한 진단과 투명한 과정 안내는 배관1번가가 지켜나가는 가장 중요한 약속입니다.';const items=[['24시간 상담','언제든 편하게 문의'],['전문 장비 보유','원인 확인부터 꼼꼼하게'],['작업 전 비용 안내','설명 후 동의받고 진행'],['전국 지역 상담','방문 가능 일정 확인']];q('.team-promises',promise)?.querySelectorAll('span').forEach((el,i)=>{if(items[i])el.innerHTML='<strong>'+items[i][0]+'</strong><small>'+items[i][1]+'</small>';});}
+const frame=q('#teamGroupPhoto .team-group-photo-frame');if(frame){frame.style.maxWidth='920px';}
+const heading=q('#cost .price-overview-heading'),shell=q('#cost .price-table-shell');if(heading&&shell&&!q('#cost .price-content-grid')){const old=heading.querySelector('p');if(old)old.remove();const intro=document.createElement('p');intro.className='price-lead';intro.textContent='작업 범위와 현장 조건을 확인하고, 진행 전 비용을 안내해 드립니다.';heading.append(intro);const grid=document.createElement('div');grid.className='price-content-grid';const aside=document.createElement('aside');aside.className='price-reasons';aside.innerHTML='<h3>견적이 달라지는 이유</h3><p>같은 막힘이라도 현장 상태와 필요한 작업 범위에 따라 비용이 달라질 수 있습니다.</p><ul><li>막힘 위치와 깊이, 배관 구조</li><li>배관 길이와 오염 정도</li><li>사용 장비 및 부품 교체 여부</li></ul><div class="price-call-note">작업 범위와 금액을 먼저 안내하고 동의 후 진행합니다</div>';shell.before(grid);grid.append(shell,aside);}
+const host=q('#intakeRows'),feed=host&&host.parentElement,feedList=feed&&feed.querySelector('.feed-list');if(host&&feedList){const sync=()=>{let clone=feedList.querySelector('.feed-set-loop');if(!clone){clone=document.createElement('div');clone.className='feed-set feed-set-loop';clone.setAttribute('aria-hidden','true');feedList.append(clone);}clone.replaceChildren(...[...host.children].map(el=>el.cloneNode(true)));};sync();new MutationObserver(sync).observe(host,{childList:true});}
+})();
+</script></body></html>
