@@ -1649,7 +1649,7 @@ d.onchange=()=>{msg.textContent=[p.value,c.value,d.value].filter(Boolean).join('
 let hideToast;
 function toast(t){const e=document.getElementById('toast');e.textContent=t;e.style.display='block';clearTimeout(hideToast);hideToast=setTimeout(()=>{e.style.display='none'},4300)}
 function callNow(){window.location.href='tel:05078781196'}
-function chatNow(){toast('카카오톡 상담 링크 등록 전입니다.')}
+function chatNow(){window.open('https://open.kakao.com/o/sn91CIXi','_blank','noopener,noreferrer')}
 function flipService(el){el.classList.toggle("flipped");el.setAttribute("aria-pressed",String(el.classList.contains("flipped")))}
 function updateRegionDial(){const el=document.getElementById("regionDial");el.hidden=!(p.value&&c.value&&d.value);if(!el.hidden)el.textContent=d.value+" 상담하기 ☎"}
 function regionCall(){if(!p.value||!c.value||!d.value){toast('시·도, 시·군·구, 읍·면·동을 선택해 주세요.');return}msg.textContent=[p.value,c.value,d.value].join(' ')+' · 방문 일정 상담을 연결합니다';callNow()}
@@ -2449,4 +2449,4 @@ html body .intake-table .feed{height:320px!important;min-height:320px!important}
 html body .intake-table #intakeRows .ticker-item,html body .intake-table .feed-set-loop .ticker-item{height:64px!important;min-height:64px!important;max-height:64px!important;align-items:center!important}
 html body .intake-table .ticker-status{display:inline-flex!important;align-items:center!important;align-self:center!important;justify-content:center!important;justify-self:start!important;width:max-content!important;max-width:65px!important;height:24px!important;min-height:0!important;max-height:24px!important;padding:4px 5px!important;border-radius:15px!important;gap:3px!important}
 html body .ticker-status .ticker-dot{width:5px!important;height:5px!important;min-width:5px!important}
-}</style></body></html>
+}</style><script id="kakao-consult-link">(()=>{const link=document.querySelector('.home-lead-area');if(link){link.href='https://open.kakao.com/o/sn91CIXi';link.target='_blank';link.rel='noopener noreferrer';link.textContent='카카오톡 상담';link.setAttribute('aria-label','카카오톡 1:1 상담 열기');}})();</script></body></html>
