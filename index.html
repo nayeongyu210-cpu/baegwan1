@@ -1614,6 +1614,57 @@ html body #intake .intake-table-head,html body #intake .intake-table .feed-item{
 html body #intake .feed-location strong{font-size:16px!important;line-height:1.5;word-break:keep-all}
 }
 @media(prefers-reduced-motion:reduce){html body #intake .live-dot{animation:none!important;box-shadow:0 0 0 4px #ed23372e}}
+</style><style id="site-layout-refinement">
+@media (min-width:761px){
+  header{height:108px!important}
+  .head.wrap{display:grid!important;grid-template-columns:168px minmax(0,1fr) 252px!important;gap:22px!important;align-items:center}
+  .brand{width:168px!important;min-width:0!important;display:flex!important;align-items:center!important}
+  .brand img{width:156px!important;height:100px!important;max-width:none!important;object-fit:contain!important}
+  #nav.nav{justify-content:center!important;gap:clamp(16px,1.8vw,28px)!important;white-space:nowrap!important;font-size:17px!important}
+  .header-call{width:252px!important;min-width:252px!important;min-height:52px!important;padding:10px 14px!important;border:0!important;border-radius:28px!important;background:#1260E5!important;color:#fff!important;text-align:center!important;font-size:19px!important;font-weight:850!important;box-shadow:none!important}
+  .header-call:before{content:"365일 24시간 상담";display:block;width:max-content;margin:-30px auto 4px;padding:5px 15px;background:#FFBD48;color:#172434;border-radius:16px;font-size:13px;font-weight:800}
+  .home-lead-inner{width:min(1200px,calc(100% - 64px))!important;grid-template-columns:minmax(0,1fr) minmax(0,1fr)!important;gap:42px!important;min-height:500px!important;padding-top:36px!important;padding-bottom:40px!important}
+  .home-lead-visual{min-height:0!important;height:430px!important;position:relative!important}
+  .home-lead-badge{width:154px!important;height:auto!important;right:16px!important;top:16px!important;z-index:4!important;padding:7px!important;background:#fff!important;border:1px solid #e6edf6!important;border-radius:50%!important;box-shadow:0 6px 18px #152f4b20!important}
+  .stats-inner{width:min(520px,calc(100% - 48px))!important;margin:22px auto 30px!important}
+  .daily-counter-card{width:100%!important;min-height:92px!important;padding:14px 20px!important;border:1px solid #cbdaf0!important;border-radius:14px!important;box-shadow:none!important}
+  .daily-counter-title{font-size:17px!important;line-height:1.25!important}
+  .daily-counter-title small{font-size:12px!important}
+  .daily-counter-value strong{min-width:42px!important;height:48px!important;font-size:32px!important}
+  .team-group-photo-section{padding:18px 0 52px!important;background:#fff!important}
+  .team-group-photo-frame{width:min(1080px,calc(100% - 64px))!important;height:auto!important;min-height:0!important;margin:0 auto!important;padding:0!important;border:1px solid #e1e7ef!important;border-radius:12px!important;overflow:hidden!important;background:#f5f7fa!important}
+  .team-group-photo-frame img{display:block!important;width:100%!important;height:auto!important;max-height:470px!important;aspect-ratio:2/1!important;object-fit:cover!important;object-position:center 53%!important}
+  .price-overview-heading{display:grid!important;grid-template-columns:minmax(0,1fr) 300px!important;align-items:end!important;gap:36px!important;margin-bottom:22px!important}
+  .price-overview-heading>p{max-width:300px!important;margin:0!important;padding:14px 16px!important;border:1px solid #d8e3f1!important;border-left:3px solid #1260E5!important;border-radius:8px!important;background:#fff!important;font-size:15px!important;line-height:1.6!important;color:#536982!important}
+  .price-table-header,.price-table-row{grid-template-columns:minmax(0,1.25fr) minmax(0,.95fr) minmax(190px,.7fr)!important;gap:0!important}
+  .price-table-header>span:nth-child(2),.price-table-row>.price-basis{border-left:1px solid #e3e9f1!important;padding-left:26px!important}
+  .price-table-header>span:last-child,.price-table-row>.price-amount,.price-table-row>.price-by-quote{padding-left:18px!important}
+  .price-table-row{min-height:82px!important}
+  .price-row-feature{min-height:100px!important}
+  #intake .intake-table .feed-list{animation:intakeFiveRise 38s cubic-bezier(.4,0,.2,1) infinite!important}
+  #intake .intake-table:hover .feed-list{animation-play-state:running!important}
+  @keyframes intakeFiveRise{
+    0%,13%{transform:translateY(0)}
+    18%,30%{transform:translateY(calc(var(--receipt-row-height)*-1))}
+    35%,47%{transform:translateY(calc(var(--receipt-row-height)*-2))}
+    52%,64%{transform:translateY(calc(var(--receipt-row-height)*-3))}
+    69%,81%{transform:translateY(calc(var(--receipt-row-height)*-4))}
+    86%,98%{transform:translateY(calc(var(--receipt-row-height)*-5))}
+    100%{transform:translateY(calc(var(--receipt-row-height)*-5))}
+  }
+}
+@media(max-width:760px){
+  .team-group-photo-section{padding:8px 0 36px!important;background:#fff!important}
+  .team-group-photo-frame{width:calc(100% - 32px)!important;height:auto!important;min-height:0!important;margin:0 auto!important;border:1px solid #e1e7ef!important;border-radius:10px!important;overflow:hidden!important}
+  .team-group-photo-frame img{display:block!important;width:100%!important;height:auto!important;aspect-ratio:4/3!important;object-fit:cover!important;object-position:center 52%!important}
+  .stats-inner{width:calc(100% - 32px)!important;margin:18px auto 26px!important}
+  .daily-counter-card{min-height:78px!important;padding:12px 14px!important}
+  .price-overview-heading{display:flex!important;flex-direction:column!important;align-items:stretch!important;gap:12px!important}
+  .price-overview-heading>p{max-width:none!important;margin:0!important;padding:12px 14px!important;border-left:3px solid #1260E5!important;border-radius:7px!important;background:#fff!important}
+  .price-table-header,.price-table-row{grid-template-columns:minmax(110px,1fr) minmax(100px,.85fr) minmax(88px,.7fr)!important;gap:6px!important;padding-left:12px!important;padding-right:12px!important}
+  .price-table-header>span:nth-child(2),.price-table-row>.price-basis{border-left:0!important;padding-left:0!important}
+  #intake .intake-table .feed-list{animation:intakeFiveRise 38s cubic-bezier(.4,0,.2,1) infinite!important}
+}
 </style></head>
 <body>
 <header><div class="wrap head">
@@ -2139,4 +2190,8 @@ html body .hero-work-photo{width:100%!important;height:100%!important;object-fit
  html body .section h2,html body .rail-head h2,html body .final-contact h2{font-size:28px!important}
  html body .section p,html body .case-body p,html body .review p{font-size:15px!important}
 }
-</style></body></html>
+</style><script id="site-content-refinement">
+(()=>{const frame=document.querySelector('#teamGroupPhoto .team-group-photo-frame');if(frame&&!frame.querySelector('img')){const img=document.createElement('img');img.src='/images/team-group.webp';img.alt='배관1번가 직원과 작업 차량, 장비 단체사진';img.loading='lazy';frame.append(img);}
+const region=document.querySelector('#region');if(region){const h=region.querySelector('h2');if(h)h.innerHTML='가까운 지점에서<br><span>배관1번가 전문가를 가장 빠르게 만나보세요</span>';const p=region.querySelector('.section-heading .explain');if(p)p.textContent='가까운 지점에서 방문 가능한 일정을 먼저 확인해 드립니다.';}
+})();
+</script></body></html>
