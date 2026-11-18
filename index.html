@@ -1900,4 +1900,161 @@ const caseSection=qs('#cases');if(caseSection){const rail=qs('#casesRail',caseSe
 const reviewRoot=qs('#reviewMarquee');if(reviewRoot){const track=qs('.review-track',reviewRoot);if(track){track.innerHTML='';for(let copy=0;copy<2;copy++){const set=document.createElement('div');set.className='review-set';if(copy){set.setAttribute('aria-hidden','true');set.setAttribute('inert','');}reviews.forEach(([work,name,body])=>{const card=document.createElement('article');card.className='review';const label=document.createElement('span');label.className='review-work-label';label.textContent='작업 내용';const title=document.createElement('h3');title.textContent=work;const p=document.createElement('p');p.textContent=body;const author=document.createElement('span');author.className='review-author';author.textContent=name+' 고객님';card.append(label,title,p,author);set.append(card);});track.append(set);}}}
 const main=qs('main');if(main){const ordered=['services','intake','cost','region','cases','teamPromise','process','faq','reviews'];let anchor=qs('#services',main);for(const id of ordered){const section=qs('#'+id,main);if(section&&anchor){anchor.after(section);anchor=section;}}}
 })();
+</script><style id="reference-layout-final">
+:root{--blue:#1260E5;--gold:#FFBD48;--ink:#111827;--line:#e4e8ef}
+html body{background:#fff;color:#101827}
+html body header,html body.header-scrolled header{height:104px!important;background:rgba(255,255,255,.97)!important;border-bottom:1px solid #e5e8ed!important}
+html body header .head{height:100%!important;gap:30px!important}
+html body .brand{width:255px!important;height:90px!important;flex:0 0 255px}
+html body .brand img{width:255px!important;height:86px!important;object-fit:contain}
+html body .nav{gap:0!important;font-size:18px!important;font-weight:750!important;white-space:nowrap}
+html body .nav a{padding:10px 0!important}
+html body .nav a+a{margin-left:22px!important;padding-left:22px!important;border-left:1px solid #cbd2dc}
+html body .header-call{min-width:245px;padding:0!important;background:transparent!important;border:0!important;border-radius:0!important;box-shadow:none!important;display:flex!important;flex-direction:column!important;align-items:stretch!important;gap:4px!important;line-height:1.15!important}
+html body .header-call-label{display:block!important;align-self:center;background:var(--gold);color:#101827!important;border-radius:999px;padding:6px 18px;font-size:14px!important;font-weight:800!important}
+html body .header-call strong{display:block!important;text-align:center;background:#0752b5;color:#fff;border-radius:999px;padding:8px 16px;font-size:25px!important;font-weight:850!important;letter-spacing:-.02em!important}
+html body .home-lead{background:#fff!important;border:0!important;overflow:hidden}
+html body .home-lead-inner{grid-template-columns:1.04fr .96fr!important;min-height:490px!important;gap:30px!important;padding:36px 0 28px!important}
+html body .home-lead-copy{align-self:center!important}
+html body .home-lead-kicker{display:inline-flex!important;align-items:center!important;background:var(--gold)!important;color:#111827!important;border-radius:12px!important;padding:9px 18px!important;font-size:20px!important;font-weight:850!important;line-height:1.3!important}
+html body .home-lead-kicker i{display:none!important}
+html body .home-lead h1{font-size:clamp(48px,4.6vw,66px)!important;line-height:1.14!important;letter-spacing:-.055em!important;margin:22px 0 18px!important;color:#111827!important}
+html body .home-lead h1 span{display:inline-block;color:#0752b5!important;font-weight:900!important}
+html body .home-lead-copy>p{font-size:23px!important;font-weight:700!important;line-height:1.45!important;margin:0 0 25px!important;color:#222b38!important}
+html body .home-lead-points{display:none!important}
+html body .home-lead-actions{display:flex!important;gap:16px!important;margin-top:24px!important}
+html body .home-lead-call,html body .home-lead-area{min-height:66px!important;justify-content:center!important;border-radius:10px!important;padding:14px 22px!important;font-size:19px!important;font-weight:800!important;box-shadow:none!important}
+html body .home-lead-call{flex:1;background:#0752b5!important;border:1px solid #0752b5!important;color:#fff!important}
+html body .home-lead-call small{font-size:13px!important}
+html body .home-lead-call strong{font-size:23px!important}
+html body .home-lead-area{flex:1;background:var(--gold)!important;border:1px solid var(--gold)!important;color:#111827!important}
+html body .home-lead-visual{position:relative!important;height:450px!important;min-height:450px!important;align-self:end!important}
+html body .hero-work-photo{height:100%!important;min-height:450px!important;max-height:450px!important;object-fit:cover!important;object-position:center 35%!important;border-radius:4px!important}
+html body .home-lead-badge{width:135px!important;top:10px!important;right:10px!important}
+html body .home-lead-team-label{display:none!important}
+.ref-feature-strip{padding:0 0 28px;background:#fff}
+.ref-feature-grid{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:12px}
+.ref-feature{min-height:112px;display:flex;align-items:center;gap:16px;padding:18px 20px;border:1px solid #e9edf3;border-radius:14px;background:#f7f8fb}
+.ref-feature-icon{width:52px;flex:0 0 52px;color:#064ca9}
+.ref-feature-icon svg{display:block;width:50px;height:50px;fill:none;stroke:currentColor;stroke-width:1.9;stroke-linecap:round;stroke-linejoin:round}
+.ref-feature strong{display:block;font-size:18px;line-height:1.3;font-weight:850;color:#121a28}
+.ref-feature small{display:block;margin-top:4px;font-size:14px;line-height:1.4;color:#4b5563}
+html body .stats-bar{padding:0 0 32px!important;background:#fff!important}
+html body .daily-counter-card{border-color:#dfe4eb!important;border-radius:12px!important;min-height:72px!important}
+html body .section#services{padding:22px 0 42px!important;background:#084da5!important;color:#fff!important}
+html body #services .section-heading{margin-bottom:16px!important}
+html body #services .section-heading h2{color:#fff!important;font-size:34px!important}
+html body #services .section-heading .eyebrow{display:none!important}
+.ref-service-grid{display:grid;grid-template-columns:repeat(5,minmax(0,1fr));gap:12px}
+.ref-service-card{min-height:138px;padding:16px 14px 14px;border:1px solid #e9eef5;border-radius:14px;background:#fff;color:#111827;text-align:center;display:flex;flex-direction:column;align-items:center;justify-content:center}
+.ref-service-card .ref-service-icon{width:38px;height:38px;color:#064ca9;margin-bottom:6px}
+.ref-service-card svg{width:38px;height:38px;fill:none;stroke:currentColor;stroke-width:2;stroke-linecap:round;stroke-linejoin:round}
+.ref-service-card strong{font-size:19px;line-height:1.25;font-weight:850}
+.ref-service-card small{margin-top:5px;font-size:14px;color:#3b4654;line-height:1.35}
+html body #intake .live-pill{color:#d32032!important;font-size:16px!important;font-weight:850!important}
+html body #intake .feed-columns{font-size:14px!important;color:#536174!important}
+html body #intake .intake-table-head{display:grid!important;grid-template-columns:minmax(220px,1.1fr) minmax(180px,1fr) 140px 95px!important;align-items:center;padding:11px 18px!important;background:#f4f6f9;border:1px solid #e5e9ef;border-bottom:0;border-radius:12px 12px 0 0;font-weight:750;color:#526073}
+html body #intake .feed{height:320px!important;min-height:320px!important;border:1px solid #e2e7ee!important;border-radius:0 0 12px 12px!important;overflow:hidden!important;background:#fff!important;box-shadow:none!important;padding:0!important}
+html body #intake .feed-list{height:100%!important;overflow:hidden!important;animation:none!important}
+html body #intakeRows{display:flex!important;flex-direction:column!important}
+html body #intakeRows .ticker-item{height:63px;min-height:63px;display:grid;grid-template-columns:minmax(220px,1.1fr) minmax(180px,1fr) 140px 95px;align-items:center;gap:12px;padding:0 18px;border-bottom:1px solid #edf0f4;animation:feedFade .3s ease both}
+html body #intakeRows .ticker-item:nth-child(odd){background:#fff}
+html body #intakeRows .ticker-item:nth-child(even){background:#fbfcfd}
+.ticker-region{font-weight:750;color:#192536;font-size:16px;white-space:nowrap}
+.ticker-service{color:#263448;font-size:15px;font-weight:650}
+.ticker-status{display:inline-flex;align-items:center;gap:7px;width:max-content;padding:5px 10px;border-radius:999px;font-size:13px;font-weight:800}
+.ticker-status.done{background:#ffeaec;color:#cf1e2b}
+.ticker-status.talking{background:#fff1dc;color:#b45b00}
+.ticker-status.waiting{background:#eef3fc;color:#2859a2}
+.ticker-dot{width:8px;height:8px;border-radius:50%;background:#df2634}
+.ticker-status.done .ticker-dot{animation:livePulse 1.1s ease-out infinite}
+.ticker-status.talking .ticker-dot{background:#f0a022}
+.ticker-status.waiting .ticker-dot{background:#3772c8}
+.ticker-time{text-align:right;color:#778396;font-size:13px;white-space:nowrap}
+@keyframes feedFade{from{opacity:.25;transform:translateY(9px)}to{opacity:1;transform:translateY(0)}}
+html body #reviews{padding:54px 0!important}
+html body #reviews .rail-head{margin-bottom:18px!important}
+html body #reviewMarquee{overflow:hidden!important}
+html body .review-track{animation:reviewLeft 150s linear infinite!important}
+html body .review-set{gap:12px!important}
+html body .review-set .review{min-width:244px!important;width:244px!important;min-height:206px!important;height:206px!important;padding:16px!important;border:1px solid #e0e5ed!important;border-radius:12px!important;box-shadow:none!important}
+html body .review-work-label{font-size:11px!important}
+html body .review-set .review h3{font-size:15px!important;margin:5px 0 8px!important}
+html body .review-set .review p{font-size:13.5px!important;line-height:1.55!important;display:-webkit-box!important;-webkit-box-orient:vertical!important;-webkit-line-clamp:5!important;overflow:hidden!important;margin:0!important}
+html body .review-author{font-size:13px!important;margin-top:auto!important;padding-top:9px!important}
+@media(max-width:1000px){
+ html body header .head{gap:16px!important}
+ html body .brand{width:200px!important;flex-basis:200px}
+ html body .brand img{width:200px!important}
+ html body .nav{font-size:15px!important}
+ html body .nav a+a{margin-left:12px!important;padding-left:12px!important}
+ html body .header-call{min-width:195px}
+ html body .header-call strong{font-size:20px!important}
+ .ref-feature-grid{grid-template-columns:repeat(2,minmax(0,1fr))}
+ .ref-service-grid{grid-template-columns:repeat(3,minmax(0,1fr))}
+}
+@media(max-width:680px){
+ html body header,html body.header-scrolled header{height:76px!important}
+ html body header .head{gap:8px!important}
+ html body .brand{width:160px!important;height:68px!important;flex:0 0 160px}
+ html body .brand img{width:160px!important;height:66px!important}
+ html body .nav{display:none!important;position:absolute;left:0;right:0;top:76px;background:#fff;padding:14px 20px!important;box-shadow:0 8px 18px #15233b14;flex-direction:column;align-items:stretch!important;gap:0!important}
+ html body .nav.open{display:flex!important}
+ html body .nav a{padding:11px 2px!important}
+ html body .nav a+a{margin:0!important;padding:11px 2px!important;border-left:0;border-top:1px solid #e8ebf0}
+ html body .header-call{min-width:130px!important;width:130px!important;gap:3px!important}
+ html body .header-call-label{font-size:10px!important;padding:4px 5px!important}
+ html body .header-call strong{font-size:14px!important;padding:7px 4px!important}
+ html body .home-lead-inner{grid-template-columns:1fr!important;gap:18px!important;min-height:auto!important;padding:24px 0 20px!important}
+ html body .home-lead-kicker{font-size:14px!important;padding:7px 12px!important;border-radius:8px!important}
+ html body .home-lead h1{font-size:clamp(37px,10vw,49px)!important;margin:16px 0 10px!important}
+ html body .home-lead-copy>p{font-size:17px!important;margin:0 0 15px!important}
+ html body .home-lead-actions{gap:9px!important;margin-top:16px!important}
+ html body .home-lead-call,html body .home-lead-area{min-height:54px!important;padding:10px 8px!important;font-size:14px!important}
+ html body .home-lead-call strong{font-size:16px!important}
+ html body .home-lead-call small{font-size:11px!important}
+ html body .home-lead-visual{height:auto!important;min-height:0!important}
+ html body .hero-work-photo{height:auto!important;min-height:0!important;max-height:none!important;aspect-ratio:1.35/1!important;object-position:center 35%!important}
+ html body .home-lead-badge{width:100px!important;top:8px!important;right:7px!important}
+ .ref-feature-strip{padding:0 0 20px}
+ .ref-feature-grid{grid-template-columns:repeat(2,minmax(0,1fr));gap:8px}
+ .ref-feature{min-height:82px;padding:10px 9px;gap:8px;border-radius:10px}
+ .ref-feature-icon{width:34px;flex-basis:34px}
+ .ref-feature-icon svg{width:34px;height:34px}
+ .ref-feature strong{font-size:13px}
+ .ref-feature small{font-size:11px;margin-top:2px}
+ html body .stats-bar{padding:0 0 20px!important}
+ html body .daily-counter-card{min-height:62px!important;padding:8px 10px!important}
+ html body .section#services{padding:25px 0!important}
+ html body #services .section-heading h2{font-size:27px!important}
+ .ref-service-grid{grid-template-columns:repeat(2,minmax(0,1fr));gap:8px}
+ .ref-service-card{min-height:118px;padding:10px 8px;border-radius:10px}
+ .ref-service-card .ref-service-icon,.ref-service-card svg{width:32px;height:32px}
+ .ref-service-card strong{font-size:15px}
+ .ref-service-card small{font-size:12px}
+ html body #intake .intake-table-head{grid-template-columns:minmax(0,1fr) minmax(0,1fr) 98px!important;padding:9px 10px!important;font-size:12px}
+ html body #intake .feed{height:300px!important;min-height:300px!important}
+ html body #intakeRows .ticker-item{height:59px;min-height:59px;grid-template-columns:minmax(0,1fr) minmax(0,1fr) 98px;gap:6px;padding:0 10px}
+ .ticker-region{font-size:12px;white-space:normal;line-height:1.2}
+ .ticker-service{font-size:12px}
+ .ticker-status{font-size:10px;padding:4px 6px}
+ .ticker-time{display:none}
+ html body #intake .intake-table-head span:last-child{display:none}
+ html body #reviews{padding:38px 0!important}
+ html body .review-set .review{min-width:76vw!important;width:76vw!important;max-width:260px!important;height:194px!important;min-height:194px!important;padding:13px!important}
+ html body .review-set .review p{font-size:12.5px!important;-webkit-line-clamp:5!important}
+}
+@media(prefers-reduced-motion:reduce){.ticker-status.done .ticker-dot{animation:none!important}.review-track{animation:none!important}}
+</style><script id="reference-layout-script">
+(()=>{const q=(s,r=document)=>r.querySelector(s);
+const headerCall=q('.header-call');if(headerCall)headerCall.innerHTML='<span class="header-call-label">365일 24시간 상담</span><strong>☎ 050-7878-1196</strong>';
+const hero=q('.home-lead');if(hero){const kicker=q('.home-lead-kicker',hero);if(kicker)kicker.textContent='365일 24시간 배관 전문 서비스';const second=q('.home-lead-area',hero);if(second){second.textContent='무료 견적 문의';second.href='#cost';}
+const title=q('h1',hero);if(title)title.innerHTML='배관 문제 해결의 기준!<br><span>배관1번가</span>';
+const copy=q('.home-lead-copy>p',hero);if(copy)copy.textContent='막힘 · 누수 · 역류 · 악취, 지금 바로 해결하세요!';
+}
+if(!q('.ref-feature-strip')){const stats=q('.stats-bar');const feature=document.createElement('section');feature.className='ref-feature-strip';feature.innerHTML='<div class="wrap ref-feature-grid"><article class="ref-feature"><span class="ref-feature-icon"><svg viewBox="0 0 48 48"><circle cx="24" cy="26" r="15"/><path d="M24 26V16m0-8v4m-5-4h10M24 26l8-7"/></svg></span><span><strong>24시간 상담</strong><small>언제든 편하게 문의</small></span></article><article class="ref-feature"><span class="ref-feature-icon"><svg viewBox="0 0 48 48"><path d="m9 35 15-15m-6-6 5-5 7 7-5 5m-7 19 5-5-7-7-5 5m22-23 4 4-7 7-4-4m-7 20 5-5 7 7-5 5"/></svg></span><span><strong>전문 장비 보유</strong><small>원인 확인부터 꼼꼼하게</small></span></article><article class="ref-feature"><span class="ref-feature-icon"><svg viewBox="0 0 48 48"><path d="M24 5 39 11v11c0 10-6 17-15 21C15 39 9 32 9 22V11Z"/><path d="m17 24 5 5 10-11"/></svg></span><span><strong>작업 전 비용 안내</strong><small>설명 후 동의받고 진행</small></span></article><article class="ref-feature"><span class="ref-feature-icon"><svg viewBox="0 0 48 48"><circle cx="24" cy="20" r="13"/><path d="M24 33v10m-8 0h16M19 20h.1m10 0h.1"/></svg></span><span><strong>전국 지역 상담</strong><small>방문 가능 일정 확인</small></span></article></div>';if(stats)stats.before(feature);}
+const service=q('#services');if(service){const old=q('.flip-services',service);if(old&&!q('.ref-service-grid',service)){const grid=document.createElement('div');grid.className='ref-service-grid';const cards=[['pipe','배관 막힘','싱크대 · 하수구 · 변기'],['drop','누수 탐지·수리','보이지 않는 누수까지'],['cycle','역류 해결','배수 역류 · 악취 점검'],['wrench','배관 공사','교체 · 연장 · 보수'],['gear','정기 점검','예방 점검 · 관리 서비스']];const icons={pipe:'<path d="M7 9h11v10H7zM18 13h7v10h9v8h-9a8 8 0 0 1-8-8v-4"/>',drop:'<path d="M24 5S12 19 12 27a12 12 0 0 0 24 0C36 19 24 5 24 5Z"/><path d="M19 28a5 5 0 0 0 5 5"/>',cycle:'<path d="M38 19a15 15 0 0 0-26-5l-3 3m0 0v-9m0 9h9M10 29a15 15 0 0 0 26 5l3-3m0 0v9m0-9h-9"/>',wrench:'<path d="M30 9a10 10 0 0 0-12 12L8 31a5 5 0 0 0 7 7l10-10A10 10 0 0 0 37 16l-6 6-6-6Z"/><path d="m7 11 8 8"/>',gear:'<circle cx="24" cy="24" r="7"/><path d="M24 5v5m0 28v5M5 24h5m28 0h5M10.5 10.5l3.5 3.5m20 20 3.5 3.5m0-27-3.5 3.5m-20 20-3.5 3.5"/> '};cards.forEach(([key,title,desc])=>{const card=document.createElement('article');card.className='ref-service-card';card.innerHTML='<span class="ref-service-icon"><svg viewBox="0 0 48 48">'+icons[key]+'</svg></span><strong>'+title+'</strong><small>'+desc+'</small>';grid.append(card);});old.replaceWith(grid);}}
+const intake=q('#intake');if(intake){const pill=q('.live-pill',intake);if(pill)pill.innerHTML='<span class="live-dot" aria-hidden="true"></span> 실시간 접수';const head=q('.rail-head h2',intake);if(head)head.textContent='접수 현황';const columns=q('.feed-columns',intake);if(columns)columns.textContent='지역별 문의 · 접수 및 상담 상황';const labels=q('.intake-table-head',intake);if(labels){labels.hidden=false;labels.innerHTML='<span>상담 지역</span><span>문의 내용</span><span>진행 상태</span><span>시간</span>';}
+const host=q('#intakeRows',intake);if(host){const list=host.parentElement;[...list.children].forEach(child=>{if(child!==host)child.remove();});host.innerHTML='';const regions=['서울시 은평구 역촌동','서울시 강남구 역삼동','서울시 송파구 잠실동','서울시 강서구 화곡동','서울시 마포구 망원동','경기도 수원시 영통구 광교동','경기도 성남시 분당구 정자동','경기도 고양시 일산동구 장항동','경기도 용인시 수지구 풍덕천동','인천시 연수구 송도동','인천시 남동구 구월동','대전시 서구 둔산동','대전시 유성구 봉명동','대구시 수성구 범어동','부산시 해운대구 우동','부산시 수영구 광안동','울산시 남구 삼산동','광주시 북구 용봉동','충남 천안시 서북구 불당동','충남 아산시 배방읍 장재리','충북 청주시 흥덕구 복대동','전북 전주시 완산구 효자동','경남 김해시 장유동','경남 양산시 물금읍'];const jobs=['변기 막힘','싱크대 막힘','하수구 막힘','세면대 막힘','누수 탐지','싱크대 역류','하수구 역류','변기 역류','배관 내시경 검사','고압세척','배관 청소','수전 교체','변기 교체','동파 해빙','배관 교체·보수'];const recs=Array.from({length:1000},(_,i)=>({region:regions[(i*7+Math.floor(i/9))%regions.length],job:jobs[(i*11+Math.floor(i/13))%jobs.length],state:i%7===0?'상담중':i%5===0?'배정중':'접수완료',time:i%6===0?'방금 전':(1+i%9)+'분 전'}));let start=0;const render=()=>{host.innerHTML='';for(let j=0;j<5;j++){const rec=recs[(start+j)%recs.length];const row=document.createElement('div');row.className='ticker-item';const region=document.createElement('span');region.className='ticker-region';region.textContent=rec.region;const service=document.createElement('span');service.className='ticker-service';service.textContent=rec.job;const badge=document.createElement('span');badge.className='ticker-status '+(rec.state==='접수완료'?'done':rec.state==='상담중'?'talking':'waiting');badge.innerHTML='<i class="ticker-dot" aria-hidden="true"></i>';const label=document.createElement('span');label.textContent=rec.state;badge.append(label);const time=document.createElement('span');time.className='ticker-time';time.textContent=rec.time;row.append(region,service,badge,time);host.append(row);}};render();window.setInterval(()=>{start=(start+1)%recs.length;render();},5000);}}
+})();
 </script></body></html>
