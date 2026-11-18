@@ -1666,7 +1666,7 @@ document.querySelectorAll('#nav a').forEach(a=>a.addEventListener('click',()=>do
   let state=2166136261;
   for(const ch of dateKey)state=Math.imul(state^ch.charCodeAt(0),16777619)>>>0;
   function random(){state=(Math.imul(state,1664525)+1013904223)>>>0;return state/4294967296;}
-  const dailyTarget=560+Math.floor(random()*40);
+  let dailyTarget=551+Math.floor(random()*49);while(dailyTarget%10===0)dailyTarget=551+Math.floor(random()*49);
   const steps=[];let total=0,elapsed=0;
   while(total<dailyTarget){
    const amount=Math.min(1+Math.floor(random()*3),dailyTarget-total);
@@ -1782,5 +1782,122 @@ function stepReview(direction){
   row.append(location,work,state);host.append(row);
  }
  const loop=host.cloneNode(true);loop.removeAttribute('id');loop.setAttribute('aria-hidden','true');loop.inert=true;host.parentElement.append(loop);
+})();
+</script><style id="baegwan-final-design">
+:root{--ink:#10213f;--blue:#1260E5;--gold:#FFBD48;--line:#dfe6ef;--soft:#f7f9fc}
+html{scroll-padding-top:100px}
+body{color:var(--ink);background:#fff}
+header,html body.header-scrolled header{background:rgba(255,255,255,.96)!important;border-bottom:1px solid #e9edf3!important;backdrop-filter:blur(10px)}
+header .head{height:88px!important}
+.nav{gap:clamp(18px,2.5vw,38px)!important;font-size:17px!important;font-weight:750!important}
+.brand img{max-height:82px!important}
+.header-call{background:var(--blue)!important;color:#fff!important;border:0!important;border-radius:999px!important;box-shadow:none!important}
+.home-lead{background:#fff!important;border:0!important}
+.home-lead-inner{min-height:520px!important;grid-template-columns:1fr 1fr!important;gap:40px!important;padding:44px 0!important}
+.home-lead-kicker{color:var(--blue)!important;font-size:19px!important;font-weight:750!important}
+.home-lead h1{font-size:clamp(48px,5.2vw,72px)!important;line-height:1.14!important;color:var(--ink)!important}
+.home-lead h1 span{color:var(--blue)!important}
+.home-lead-copy>p{font-size:20px!important;color:#33445f!important}
+.home-lead-visual{position:relative!important;min-height:420px!important;height:100%!important}
+.hero-work-photo{width:100%;height:100%;min-height:420px;max-height:520px;object-fit:cover;object-position:center 40%;display:block;border-radius:18px}
+.home-lead-badge{z-index:2!important;width:150px!important;right:-12px!important;top:-12px!important}
+.home-lead-team-label{display:none!important}
+.home-lead-points span{border:1px solid #dce6f4!important;color:#1d3153!important;background:#fff!important}
+.home-lead-call{background:var(--blue)!important;border-color:var(--blue)!important;border-radius:9px!important;box-shadow:none!important}
+.home-lead-area{border:1px solid #d8e3f2!important;border-radius:9px!important;background:#fff!important;color:var(--ink)!important}
+.stats-bar{padding:12px 0 28px!important;background:#fff!important}
+.stats-inner{display:block!important}
+.daily-counter-card{min-height:76px;border:1px solid #d9dee6;border-radius:14px;padding:12px 18px;display:flex;align-items:center;justify-content:space-between;background:#fff}
+.daily-counter-title{display:flex;align-items:center;gap:15px;font-size:18px;font-weight:800;color:#131b2b}
+.daily-counter-title small{display:block;color:#818998;font-size:13px;font-weight:500}
+.daily-counter-icon{font-size:22px;color:var(--blue);font-weight:800}
+.daily-counter-value{display:flex;align-items:center;gap:6px;font-size:17px;font-weight:750}
+.daily-counter-value strong{min-width:34px;height:38px;display:grid;place-items:center;border:1px solid #d9dee6;border-radius:8px;color:var(--blue);font-size:24px;font-variant-numeric:tabular-nums;line-height:1}
+.section{padding:76px 0!important}
+.section h2,.rail-head h2{font-size:clamp(30px,3vw,40px)!important;letter-spacing:-.04em}
+.eyebrow{color:var(--blue)!important}
+.service{border:1px solid #e5eaf2!important;box-shadow:none!important}
+.intake-section{background:#fff!important;border-color:#edf0f4!important}
+.intake-section .rail-head{margin-bottom:22px}
+.live-pill{color:#d5232f!important}
+.live-dot{background:#e21b2c!important;animation:livePulse 1.2s ease-out infinite!important;box-shadow:0 0 0 0 #e21b2c55!important}
+@keyframes livePulse{0%{box-shadow:0 0 0 0 #e21b2c75}70%{box-shadow:0 0 0 7px #e21b2c00}100%{box-shadow:0 0 0 0 #e21b2c00}}
+.feed{height:auto!important;min-height:104px;border:1px solid #e3e7ed!important;border-radius:12px!important;box-shadow:none!important}
+.feed-list{animation:none!important}
+.intake-empty{padding:30px 18px;text-align:center;color:#69768a;font-size:15px}
+#cases{background:#fff!important}
+.case-photos{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:7px;background:#f2f5f9;padding:8px}
+.case-photos figure{margin:0;min-width:0;position:relative}
+.case-photos img{width:100%;height:150px;object-fit:cover;display:block;border-radius:6px}
+.case-photos figcaption{font-size:12px;color:#59677d;padding:5px 2px 0;font-weight:650}
+.case{border:1px solid #e4e9f0!important;border-radius:14px!important;overflow:hidden;background:#fff!important;box-shadow:none!important}
+.case-body{padding:19px!important}
+.case-body strong{font-size:19px!important;color:var(--ink)}
+.case-body p{font-size:15px!important;line-height:1.65}
+#teamPromise{background:#f8faff!important}
+.team-promise-inner{display:grid;grid-template-columns:.9fr 1.1fr;gap:36px;align-items:center}
+.team-promise-photo img{display:block;width:100%;max-height:460px;object-fit:cover;border-radius:12px}
+.team-promise-copy h2{font-size:clamp(30px,3vw,42px);line-height:1.25}
+.team-promises{display:grid;grid-template-columns:1fr 1fr;gap:12px;margin:22px 0}
+.team-promises span{border:1px solid #dfe6ef;background:#fff;border-radius:8px;padding:13px 15px;font-weight:700}
+#reviews{overflow:hidden}
+.review-arrows button{border:1px solid #cdd7e5!important;background:#fff!important;color:var(--ink)!important;border-radius:8px!important}
+.review-track{animation:reviewLeft 180s linear infinite!important}
+@keyframes reviewLeft{from{transform:translateX(0)}to{transform:translateX(-50%)}}
+.review-set{gap:16px!important}
+.review-set .review{min-width:300px!important;width:300px!important;min-height:260px!important;border:1px solid #e2e7ef!important;border-radius:12px!important;box-shadow:none!important}
+.review h3{font-size:16px!important;color:var(--blue)!important}
+.review p{font-size:15px!important;line-height:1.75}
+.review-author{color:#59677d!important}
+.stars{display:none!important}
+.final-contact{padding:58px 0;background:#fff;border-top:1px solid #e9edf3}
+.final-contact-inner{display:flex;justify-content:space-between;align-items:center;gap:24px}
+.final-contact h2{font-size:32px;margin:0 0 8px}
+.final-contact p{margin:0;color:#66748b}
+.final-contact a{padding:16px 24px;background:var(--blue);color:#fff;border-radius:9px;font-weight:800}
+.footer{background:#f7f9fc!important;border-top:1px solid #e8edf3}
+a,button{transition:color .16s,background-color .16s,border-color .16s}
+@media(max-width:760px){
+ header .head{height:72px!important}
+ .nav{gap:0!important;font-size:16px!important}
+ .home-lead-inner{grid-template-columns:1fr!important;gap:23px!important;min-height:auto!important;padding:28px 0 32px!important}
+ .home-lead h1{font-size:clamp(38px,10vw,52px)!important}
+ .home-lead-copy>p{font-size:17px!important}
+ .home-lead-visual{min-height:0!important;height:auto!important}
+ .hero-work-photo{min-height:0;height:auto;max-height:none;aspect-ratio:4/3;object-position:center 38%}
+ .home-lead-badge{width:112px!important;right:9px!important;top:-14px!important}
+ .stats-bar{padding:12px 0 20px!important}
+ .daily-counter-card{min-height:68px;padding:10px 12px}
+ .daily-counter-title{font-size:16px;gap:9px}
+ .daily-counter-title small{font-size:12px}
+ .daily-counter-value{font-size:14px;gap:4px}
+ .daily-counter-value strong{min-width:29px;height:34px;font-size:21px}
+ .section{padding:54px 0!important}
+ .case-photos img{height:95px}
+ .case-photos figcaption{font-size:10px}
+ .team-promise-inner{grid-template-columns:1fr;gap:24px}
+ .team-promise-photo img{max-height:none}
+ .team-promises{grid-template-columns:1fr 1fr}
+ .review-set .review{min-width:82vw!important;width:82vw!important}
+ .final-contact-inner{align-items:flex-start;flex-direction:column}
+ .final-contact h2{font-size:27px}
+}
+@media(prefers-reduced-motion:reduce){.live-dot,.review-track{animation:none!important}}
+</style><script id="baegwan-final-content">
+(()=>{const reviews=[["누수 탐지 작업","박OO","아랫집에서 계속 물 샌다고 연락 오고 윗집 아랫집 사이에 끼여서 스트레스가 머리끝까지 차올랐었는데, 정밀 탐지기로 벽 안쪽 미세 누수까지 기가 막히게 찾아내서 공사해주셨어요 진짜 누수 딴 데 알아보지 말고 무조건 여기 부르세요 ㅠㅠㅜ"],["변기 막힘 작업","김OO","아침 출근길에 변기 막혀서 진짜 눈물 날 뻔했는데 문의 남기자마자 바로 연락 주셔서 깔끔하게 해결해주셨어요 정말 감사합니다 ㅎㅎ"],["싱크대 막힘 작업","조OO","사무실 싱크대 막혀서 골치 아팠는데 뚫어도 자꾸 역류하던 게 한방에 해결됐어요 시원하게 뚫어주셔서 감사합니다 대박 나셔요 ~!"],["누수 탐지 작업","오OO","미세 누수라 어디서 새는지 찾지도 못하고 며칠 동안 잠도 못 자고 있었는데 전문 장비 가지고 오시더니 한번에 짚어내시네요 역시 돈이 아깝지 않습니다 너무 고생하셨어요 👍"],["하수구 고압세척","문OO","상가 건물 하수구라 작업하기 까다로웠을 텐데 묵은 때까지 아주 시원하게 날려주셨어요 사장님 덕분에 장사 차질 없이 잘합니다 ㅎㅎ"],["변기 역류 작업","정OO","다른 데 전화했을 땐 부르는 게 값이고 예약도 밀렸다 그랬는데 여긴 진짜 거품 싹 빼고 정직하게 봐주셔서 너무 감사했어요 앞으로 배관은 무조건 여기만 씁니다 ⭐"],["하수구 막힘 작업","손OO","베란다 하수구 역류해서 멘탈 완전히 나갔었는데 문의 남기니 바로 연락 주셔서 해결 완료했습니다 대처가 엄청 빨라서 너무 든든했어요 ~!"],["배관 내시경 검사","신OO","배관 안쪽이 왜 자꾸 막히나 궁금해서 눈으로 직접 보고 싶었는데 내시경 화면으로 문제 있는 구간을 하나하나 짚어가면서 꼼꼼하게 설명해주시더라고요 덕분에 앞으로 어떻게 관리해야 할지 확실하게 알게 되어서 너무 유익하고 만족스러웠습니다 😊"],["누수 탐지 작업","백OO","누수 업체 세 군데나 불렀는데 다 못 잡고 헤매다가 마지막이라는 심정으로 연락드린 거였거든요 근데 오시자마자 원인 싹 찾아내서 해결해주시는 거 보고 진짜 감탄했습니다 명의가 따로 없으십니다 👍"],["변기 막힘 작업","남궁OO","아이들이 장난감을 완구통에서 꺼내다가 변기 안으로 집어넣는 바람에 완전 꽉 막혀버려서 어쩔 줄 몰랐는데, 부서지지 않게 조심스럽게 꺼내주셔서 정말 다행이었어요 진짜 금손이십니다 최고예요 ⭐"],["하수구 고압세척","전OO","막혀서 며칠을 끙끙 앓았는데 후기 보고 반신반의하면서 불렀거든요 진작 부를 걸 그랬어요 순식간에 해결해주셔서 감사합니다 ❤️"],["변기 역류 작업","진OO","밤늦은 시간에 갑자기 변기가 역류해서 온 집안이 물바다 되기 직전까지 갔었는데 접수하자마자 야간 약속 잡고 출동 나와주셔서 정말 구세주처럼 도와주셨어요 가격도 야간이라고 바가지 씌우지 않으시고 정직하게 받아주셔서 감동받았습니다 ㅠㅠㅜ"],["세면대 교체 작업","한OO","세면대 도기 깨져서 조심조심 쓰다가 결국 교체했는데 약속 시간도 칼같이 지켜주시고 뒷정리까지 완벽하게 치워주고 가셨어요 너무 친절하시네요 ❤️"],["싱크대 역류 작업","송OO","기름때 때문에 고생하던 싱크대가 아주 뻥 뚫렸습니다 작업하시면서 주변 정리도 엄청 깔끔하게 해주고 가셔서 감동받았어요 ^^"],["변기 막힘 작업","홍OO","친절하시고 설명도 찰지게 잘해주셔서 좋았어요 그리고 무엇보다 결과가 너무 완벽해서 200퍼센트 만족합니다 또 막히면 무조건 여기 부를게요 !!"],["변기 역류 작업","조OO","급할 때 바로 연락 받아주시고 칼같이 와주셔서 정말 다행이었어요 가격도 합리적이고 일처리도 깔끔하십니다 ㅠㅠㅜ"],["싱크대 막힘 작업","허OO","싱크대 막혀서 물바다 될 뻔했는데 다행히 연장 들고 오셔서 순식간에 뚫어주셨어요 설명도 꼼꼼하게 잘해주시고 친절하셨어요 ^^"],["누수 탐지 작업","양OO","아파트 누수라 온 집안바닥 다 뒤집어지는 줄 알았는데 최소한만 딱 파서 정확하게 고쳐주셨어요 실력이 진짜 장난 아니십니다 감사합니다 :)"],["하수구 고압세척","최OO","야간이라 걱정했는데 빠르게 와주셔서 장사 지장 없이 잘 해결했습니다 사장님 손놀림이 아주 장난 아니십니다 감동이에요 ^^"],["세면대 수리 작업","류OO","세면대 물 빠지는 곳이 부서져서 연락드렸는데 꼼꼼하게 교체해주시고 다른 부분까지 점검해주셨어요 너무 친절하셔서 감동받았습니다 ~!"],["싱크대 막힘 작업","이OO","설거지할 때마다 물 역류해서 미치는 줄 알았는데 배관 안쪽까지 내시경으로 시원하게 싹 다 보여주시면서 원인 짚어주시더라고요 속이 다 시원해요 👍"],["누수 탐지 작업","윤OO","누수 때문에 여기저기 알아보느라 스트레스 극극이었는데 한 번에 원인 콕 집어내서 해결해주셨어요 비용도 생각보다 훨씬 합리적이고 너무 만족합니다 !!"],["배관 내시경 검사","신OO","배관 안쪽이 왜 자꾸 막히나 궁금했는데 내시경 화면으로 문제 있는 구간 직접 보여주시면서 설명해주시니 믿음이 확 갔어요 😊"],["싱크대 막힘 작업","배OO","싱크대 밑에 냄새도 심하고 막혀서 골치 아팠는데 원인부터 해결까지 깔끔하게 끝내주셨어요 덕분에 오늘 밤은 발 쭉 뻗고 잡니다 😊"],["배관 고압세척","곽OO","속이 다 후련할 정도로 시원하게 세척해주셨어요 작업 과정도 다 설명해주시고 뒷정리도 완벽해서 흠잡을 곳이 없네요 수고하셨습니다 😊"],["누수 탐지 작업","하OO","벽에서 물 비쳐서 잠도 못 잤는데 정밀 탐지기로 한방에 잡아내고 공사까지 깔끔하게 마무리해주셨어요 진짜 마음의 짐을 덜었습니다 :)"],["하수구 막힘 작업","권OO","베란다 하수구 역류해서 멘탈 나갔었는데 문의 남기니 바로 연락 주셔서 해결 완료했습니다 대처가 엄청 빨라서 너무 든든했어요 ㅎㅎ"],["세면대 교체 작업","서OO","지방이라 빨리 오실 수 있을까 걱정했는데 약속 시간 칼같이 지켜주시고 와서 속 시원하게 교체해주셨어요 너무 감사드립니다 ❤️"],["변기 역류 작업","진OO","다른 데보다 훨씬 친절하시고 가격도 거품 없어서 좋았어요 주변에도 막힌 사람 있으면 무조건 추천할게요 !!"],["누수 탐지 작업","박OO","아랫집에서 계속 물 샌다고 연락 와서 진땀 뺐는데 정밀 장비 가지고 오시더니 벽 안쪽 미세 누수까지 기가 막히게 찾아내서 공사해주셨어요 역시 전문가는 다릅니다 👍"]];const cases=[["변기 막힘 작업","변기 물이 차오르는 현장을 확인하고 관통 작업을 진행한 뒤 배수가 되는지 점검했습니다.","toilet"],["싱크대 막힘 작업","배수 속도가 느려진 싱크대 배관을 점검하고 이물질을 정리한 뒤 물 흐름을 확인했습니다.","sink"],["하수구 고압세척","배수구 내부를 확인한 뒤 세척 장비로 배관을 정비하고 배출 상태를 확인했습니다.","drain"],["누수 탐지 작업","누수 의심 구간을 탐지 장비로 확인하고 원인 구간을 점검했습니다.","leak"],["배관 밸브 교체","노후 밸브를 확인해 교체 작업을 진행하고 연결부를 점검했습니다.","valve"]];const paths={"hero-endoscope.webp":"/images/hero-endoscope.webp","case-toilet-1.webp":"/images/case-toilet-1.webp","case-toilet-2.webp":"/images/case-toilet-2.webp","case-toilet-3.webp":"/images/case-toilet-3.webp","case-sink-1.webp":"/images/case-sink-1.webp","case-sink-2.webp":"/images/case-sink-2.webp","case-sink-3.webp":"/images/case-sink-3.webp","case-drain-1.webp":"/images/case-drain-1.webp","case-drain-2.webp":"/images/case-drain-2.webp","case-drain-3.webp":"/images/case-drain-3.webp","case-leak-1.webp":"/images/case-leak-1.webp","case-leak-2.webp":"/images/case-leak-2.webp","case-leak-3.webp":"/images/case-leak-3.webp","case-valve-1.webp":"/images/case-valve-1.webp","case-valve-2.webp":"/images/case-valve-2.webp","case-valve-3.webp":"/images/case-valve-3.webp"};
+const qs=(s,r=document)=>r.querySelector(s),qsa=(s,r=document)=>[...r.querySelectorAll(s)];
+const headerCall=qs('.header-call');if(headerCall)headerCall.textContent='24시간 상담 050-7878-1196';
+const nav=qs('#nav');if(nav){const map=[['#services','서비스 안내'],['#region','지역 선택'],['#cases','작업사례'],['#reviews','고객 후기'],['#cost','비용 안내']];map.forEach(([href,label])=>{let a=qs('a[href="'+href+'"]',nav);if(a)a.textContent=label;});}
+const hero=qs('.home-lead');if(hero){const kicker=qs('.home-lead-kicker',hero);if(kicker)kicker.textContent='합리적인 비용 · 투명한 견적 · 24시간 상담';const title=qs('h1',hero);if(title)title.innerHTML='배관 문제,<br><span>더 이상 고민하지 마세요</span>';const p=qs('.home-lead-copy>p',hero);if(p)p.textContent='작업 비용 5만원부터';const points=qs('.home-lead-points',hero);if(points)points.innerHTML='<span>작업 전 비용 안내</span><span>전화가 더 빠릅니다</span>';const call=qs('.home-lead-call',hero);if(call){const small=qs('small',call);if(small)small.textContent='전화상담 · 24시간 운영';}const area=qs('.home-lead-area',hero);if(area){area.href='#cost';area.innerHTML='무료 견적 문의 <span aria-hidden="true">↗</span>';}
+const visual=qs('.home-lead-visual',hero);const team=qs('.home-lead-team',visual);const badge=qs('.home-lead-badge',visual);const teamSection=document.createElement('section');teamSection.id='teamPromise';teamSection.className='section';teamSection.innerHTML='<div class="wrap team-promise-inner"><div class="team-promise-copy"><div class="eyebrow">BAEGWAN 1 BEONGA</div><h2>정직한 진단과<br>투명한 과정 안내</h2><p>정직한 진단과 투명한 과정 안내는 배관일번가가 지켜나가는 가장 중요한 약속입니다.</p><div class="team-promises"><span>정직한 진단</span><span>투명한 비용 안내</span><span>전문 장비 사용</span><span>작업 후 꼼꼼한 점검</span></div></div><div class="team-promise-photo"></div></div>';
+if(team){team.classList.add('team-promise-photo-source');const img=qs('img',team);if(img){img.alt='배관1번가 기술팀과 작업차 단체사진';qs('.team-promise-photo',teamSection).append(img);}team.remove();}
+if(visual){visual.innerHTML='';const photo=document.createElement('img');photo.className='hero-work-photo';photo.src=paths['hero-endoscope.webp'];photo.alt='배관1번가 작업자가 내시경 장비로 배수관을 점검하는 현장';visual.append(photo);if(badge)visual.append(badge);}
+const cta=document.createElement('section');cta.className='final-contact';cta.innerHTML='<div class="wrap final-contact-inner"><div><h2>배관 문제, 지금 상담하세요</h2><p>전화가 더 빠릅니다 · 24시간 상담</p></div><a href="tel:05078781196">050-7878-1196 전화상담</a></div>';const footer=qs('footer');if(footer)footer.before(cta);
+}
+const stats=qs('.stats-inner');if(stats){const count=qs('#dailyReceptionCount',stats);stats.innerHTML='<div class="daily-counter-card"><div class="daily-counter-title"><span class="daily-counter-icon" aria-hidden="true">↗</span><span>금일 작업건수<small>실시간 진행 중</small></span></div><div class="daily-counter-value"><strong></strong><span>건</span></div></div>';const strong=qs('.daily-counter-value strong',stats);if(count){count.id='dailyReceptionCount';count.removeAttribute('aria-live');strong.replaceWith(count);count.className='daily-count-number';}}
+const intake=qs('#intake');if(intake){const head=qs('.rail-head h2',intake);if(head)head.textContent='실시간 접수현황';const pill=qs('.live-pill',intake);if(pill)pill.innerHTML='<span class="live-dot" aria-hidden="true"></span>접수 현황';const rows=qs('#intakeRows',intake);if(rows)rows.innerHTML='<div class="intake-empty">실제 접수 데이터가 연결되면 현황이 표시됩니다</div>';const cols=qs('.feed-columns',intake);if(cols)cols.textContent='지역 · 작업 내용 · 진행 상태';const tableHead=qs('.intake-table-head',intake);if(tableHead)tableHead.hidden=true;}
+const caseSection=qs('#cases');if(caseSection){const rail=qs('#casesRail',caseSection);if(rail){rail.innerHTML='';cases.forEach(([title,desc,key])=>{const card=document.createElement('article');card.className='case';const photos=document.createElement('div');photos.className='case-photos';['작업 전','작업 중','작업 후'].forEach((label,i)=>{const fig=document.createElement('figure');const img=document.createElement('img');img.loading='lazy';img.src=paths['case-'+key+'-'+(i+1)+'.webp'];img.alt=title+' '+label;const cap=document.createElement('figcaption');cap.textContent=label;fig.append(img,cap);photos.append(fig);});const body=document.createElement('div');body.className='case-body';const strong=document.createElement('strong');strong.textContent=title;const p=document.createElement('p');p.textContent=desc;body.append(strong,p);card.append(photos,body);rail.append(card);});}}
+const reviewRoot=qs('#reviewMarquee');if(reviewRoot){const track=qs('.review-track',reviewRoot);if(track){track.innerHTML='';for(let copy=0;copy<2;copy++){const set=document.createElement('div');set.className='review-set';if(copy){set.setAttribute('aria-hidden','true');set.setAttribute('inert','');}reviews.forEach(([work,name,body])=>{const card=document.createElement('article');card.className='review';const label=document.createElement('span');label.className='review-work-label';label.textContent='작업 내용';const title=document.createElement('h3');title.textContent=work;const p=document.createElement('p');p.textContent=body;const author=document.createElement('span');author.className='review-author';author.textContent=name+' 고객님';card.append(label,title,p,author);set.append(card);});track.append(set);}}}
+const main=qs('main');if(main){const ordered=['services','intake','cost','region','cases','teamPromise','process','faq','reviews'];let anchor=qs('#services',main);for(const id of ordered){const section=qs('#'+id,main);if(section&&anchor){anchor.after(section);anchor=section;}}}
 })();
 </script></body></html>
