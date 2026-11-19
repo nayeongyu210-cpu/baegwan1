@@ -5,9 +5,6 @@ function chatNow(){window.open('https://open.kakao.com/o/sn91CIXi','_blank','noo
 function toggleNav(button){const open=button.getAttribute('aria-expanded')!=='true';button.setAttribute('aria-expanded',String(open));$('#nav').classList.toggle('open',open)}
 $$('#nav a').forEach(a=>a.addEventListener('click',()=>{$('#nav').classList.remove('open');$('.hamb').setAttribute('aria-expanded','false')}));
 function flipService(button){const flip=button.getAttribute('aria-pressed')!=='true';button.setAttribute('aria-pressed',String(flip));button.classList.toggle('flipped',flip)}
-function toggleContact(button){const open=button.getAttribute('aria-expanded')!=='true';button.setAttribute('aria-expanded',String(open));button.setAttribute('aria-label',open?'상담 메뉴 닫기':'전화·카카오톡 상담 열기');$('#contactOptions').hidden=!open}
-document.addEventListener('keydown',e=>{if(e.key==='Escape'&&$('.contact-launch').getAttribute('aria-expanded')==='true')toggleContact($('.contact-launch'))});
-document.addEventListener('click',e=>{if(!e.target.closest('.contact-widget')&&$('.contact-launch').getAttribute('aria-expanded')==='true')toggleContact($('.contact-launch'))});
 function slideRail(id,dir){const rail=document.getElementById(id);if(id==='casesRail'&&caseMotion){const width=rail.querySelector('.case').getBoundingClientRect().width+18;caseMotion.currentTime=((Number(caseMotion.currentTime)||0)+dir*width/caseSpeed*1000+caseDuration)%caseDuration;return}const item=rail.querySelector('.case');if(item)rail.scrollBy({left:dir*(item.getBoundingClientRect().width+18),behavior:reduced?'instant':'smooth'})}
 const province=$('#province'),city=$('#city'),dong=$('#dong'),regionMessage=$('#regionMessage');
 function fill(el,label,items){el.replaceChildren(new Option(label,''),...items.map(v=>new Option(v,v)))}
