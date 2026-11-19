@@ -8,7 +8,7 @@ function flipService(button){const flip=button.getAttribute('aria-pressed')!=='t
 function toggleContact(button){const open=button.getAttribute('aria-expanded')!=='true';button.setAttribute('aria-expanded',String(open));button.setAttribute('aria-label',open?'상담 메뉴 닫기':'전화·카카오톡 상담 열기');$('#contactOptions').hidden=!open}
 document.addEventListener('keydown',e=>{if(e.key==='Escape'&&$('.contact-launch').getAttribute('aria-expanded')==='true')toggleContact($('.contact-launch'))});
 document.addEventListener('click',e=>{if(!e.target.closest('.contact-widget')&&$('.contact-launch').getAttribute('aria-expanded')==='true')toggleContact($('.contact-launch'))});
-function slideRail(id,dir){const rail=document.getElementById(id),item=rail.firstElementChild;if(item)rail.scrollBy({left:dir*(item.getBoundingClientRect().width+18),behavior:reduced?'instant':'smooth'})}
+function slideRail(id,dir){const rail=document.getElementById(id);if(id==='casesRail'&&caseMotion){const width=rail.querySelector('.case').getBoundingClientRect().width+18;caseMotion.currentTime=((Number(caseMotion.currentTime)||0)+dir*width/caseSpeed*1000+caseDuration)%caseDuration;return}const item=rail.querySelector('.case');if(item)rail.scrollBy({left:dir*(item.getBoundingClientRect().width+18),behavior:reduced?'instant':'smooth'})}
 const province=$('#province'),city=$('#city'),dong=$('#dong'),regionMessage=$('#regionMessage');
 function fill(el,label,items){el.replaceChildren(new Option(label,''),...items.map(v=>new Option(v,v)))}
 fill(province,'시·도',Object.keys(areas));
@@ -33,3 +33,17 @@ renderIntake();setInterval(()=>{if(document.hidden||intakeBusy)return;intakeBusy
 function reviewCard([work,name,text]){const card=document.createElement('article');card.className='review surface';const label=document.createElement('small');label.textContent='작업 내용';const title=document.createElement('h3');title.textContent=work;const body=document.createElement('p');body.textContent=text;const author=document.createElement('span');author.className='review-author';author.textContent=name+' 고객님';card.append(label,title,body,author);return card}
 for(let i=0;i<2;i++){const set=document.createElement('div');set.className='review-set';if(i){set.setAttribute('aria-hidden','true');set.inert=true}reviews.forEach(r=>set.append(reviewCard(r)));$('#reviewTrack').append(set)}
 function stepReview(dir){const track=$('#reviewTrack'),animation=track.getAnimations()[0];if(animation){const duration=Number(animation.effect.getTiming().duration);animation.currentTime=((Number(animation.currentTime)+dir*duration/reviews.length)%duration+duration)%duration}else $('#reviewMarquee').scrollBy({left:dir*260,behavior:'smooth'})}
+
+// A slow, seamless leftward case strip; user controls also work with reduced motion.
+let caseMotion=null,caseDuration=0;const caseSpeed=14;
+const caseRail=document.getElementById('casesRail');
+if(!reduced&&caseRail){
+ const track=document.createElement('div');track.className='cases-track';
+ const set=document.createElement('div');set.className='case-set';set.append(...caseRail.children);
+ const clone=set.cloneNode(true);clone.setAttribute('aria-hidden','true');clone.inert=true;
+ track.append(set,clone);caseRail.append(track);caseRail.classList.add('is-animated');
+ const fitCaseMotion=()=>{const distance=set.getBoundingClientRect().width+18;if(!distance)return;const prior=caseMotion&&caseDuration?(Number(caseMotion.currentTime)||0)/caseDuration:0;caseMotion?.cancel();caseDuration=distance/caseSpeed*1000;caseMotion=track.animate([{transform:'translateX(0)'},{transform:'translateX(-'+distance+'px)'}],{duration:caseDuration,iterations:Infinity,easing:'linear'});caseMotion.currentTime=prior*caseDuration;};
+ fitCaseMotion();new ResizeObserver(fitCaseMotion).observe(caseRail);
+ const visible=new IntersectionObserver(entries=>{entries.forEach(e=>{if(caseMotion){if(e.isIntersecting&&!document.hidden)caseMotion.play();else caseMotion.pause();}})});visible.observe(caseRail);
+ document.addEventListener('visibilitychange',()=>{if(!caseMotion)return;if(document.hidden)caseMotion.pause();else caseMotion.play();});
+}
