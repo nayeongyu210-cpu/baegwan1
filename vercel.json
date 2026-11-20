@@ -1,0 +1,10 @@
+{
+  "$schema": "https://openapi.vercel.sh/vercel.json",
+  "functions": {"api/region.js": {"includeFiles": "{index.html,lib/**}"}},
+  "rewrites": [
+    {"source": "/regions", "destination": "/api/region"},
+    {"source": "/regions/:path*", "destination": "/api/region?path=:path*"},
+    {"source": "/sitemap.xml", "destination": "/api/region?kind=sitemap"},
+    {"source": "/sitemaps/regions-:page(\\d+).xml", "destination": "/api/region?kind=sitemap&page=:page"}
+  ]
+}
