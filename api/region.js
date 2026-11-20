@@ -1,4 +1,4 @@
-const {data,regions,parseRoute,render,directory,allPaths,urlPath,origin}=require('../lib/region-pages.cjs');
+const {data,regions,parseRoute,render,renderGuide,directory,sitemapPaths,urlPath,origin}=require('../lib/region-pages.cjs');
 const xml=s=>String(s).replace(/[&<>"']/g,c=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&apos;'}[c]));
 module.exports=(req,res)=>{
  res.setHeader('X-Content-Type-Options','nosniff');
@@ -7,7 +7,7 @@ module.exports=(req,res)=>{
   const key=data.lookup[[q.province,q.city,q.dong].map(v=>String(v||'')).join('|')];res.setHeader('Content-Type','application/json; charset=utf-8');res.setHeader('Cache-Control','public, s-maxage=3600');res.statusCode=key?200:404;return res.end(JSON.stringify({url:key?urlPath(regions.get(key)):null}));
  }
  if(kind==='sitemap'){
-  const paths=allPaths(),size=8000,count=Math.ceil(paths.length/size),page=q.page;
+  const paths=sitemapPaths(),size=8000,count=Math.ceil(paths.length/size),page=q.page;
   res.setHeader('Content-Type','application/xml; charset=utf-8');res.setHeader('Cache-Control','public, max-age=0, s-maxage=86400');
   if(page===undefined){return res.end('<?xml version="1.0" encoding="UTF-8"?><sitemapindex xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">'+Array.from({length:count},(_,i)=>`<sitemap><loc>${origin}/sitemaps/regions-${i}.xml</loc></sitemap>`).join('')+'</sitemapindex>');}
   if(!/^\d+$/.test(String(page))||Number(page)>=count){res.statusCode=404;return res.end('Not found');}
@@ -18,5 +18,5 @@ module.exports=(req,res)=>{
  if(!raw)return res.end(directory());
  const match=parseRoute(raw);
  if(!match){res.statusCode=404;res.setHeader('X-Robots-Tag','noindex');return res.end('<!doctype html><html lang="ko"><meta charset="utf-8"><title>지역 안내를 찾을 수 없습니다 | 배관1번가</title><p>지역 안내를 찾을 수 없습니다.</p><a href="/">배관1번가 홈으로</a></html>');}
- return res.end(render(match.region,match.service));
+ return res.end(match.guide?renderGuide(match.guide):render(match.region,match.service));
 };
