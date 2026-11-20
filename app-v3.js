@@ -44,3 +44,7 @@ if(!reduced&&caseRail){
  const visible=new IntersectionObserver(entries=>{entries.forEach(e=>{if(caseMotion){if(e.isIntersecting&&!document.hidden)caseMotion.play();else caseMotion.pause();}})});visible.observe(caseRail);
  document.addEventListener('visibilitychange',()=>{if(!caseMotion)return;if(document.hidden)caseMotion.pause();else caseMotion.play();});
 }
+
+function toggleContact(force){const button=document.querySelector('.contact-launch');const options=document.getElementById('contactOptions');const open=typeof force==='boolean'?force:button.getAttribute('aria-expanded')!=='true';button.setAttribute('aria-expanded',String(open));button.setAttribute('aria-label',open?'상담 메뉴 닫기':'전화·카카오톡 상담 열기');options.hidden=!open;}
+document.addEventListener('click',event=>{if(!event.target.closest('.contact-widget'))toggleContact(false)});
+document.addEventListener('keydown',event=>{if(event.key==='Escape'){const wasOpen=document.querySelector('.contact-launch').getAttribute('aria-expanded')==='true';toggleContact(false);if(wasOpen)document.querySelector('.contact-launch').focus();}});
