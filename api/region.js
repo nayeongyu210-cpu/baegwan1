@@ -1,10 +1,31 @@
-const {data,regions,parseRoute,render,renderGuide,directory,sitemapPaths,urlPath,origin}=require('../lib/region-pages.cjs');
+const {data,regions,parseRoute,render,renderGuide,buildingGuideFeedItem,directory,sitemapPaths,urlPath,origin}=require('../lib/region-pages.cjs');
 const xml=s=>String(s).replace(/[&<>"']/g,c=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&apos;'}[c]));
 module.exports=(req,res)=>{
  res.setHeader('X-Content-Type-Options','nosniff');
  const q=req.query||{};const kind=String(q.kind||'');
  if(kind==='resolve'){
   const key=data.lookup[[q.province,q.city,q.dong].map(v=>String(v||'')).join('|')];res.setHeader('Content-Type','application/json; charset=utf-8');res.setHeader('Cache-Control','public, s-maxage=3600');res.statusCode=key?200:404;return res.end(JSON.stringify({url:key?urlPath(regions.get(key)):null}));
+ }
+ if(kind==='rss'){
+  const item=buildingGuideFeedItem();
+  res.setHeader('Content-Type','application/rss+xml; charset=utf-8');
+  res.setHeader('Cache-Control','public, max-age=0, s-maxage=3600');
+  return res.end(`<?xml version="1.0" encoding="UTF-8"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>배관1번가 배관 안내</title>
+    <link>${origin}/</link>
+    <description>배관1번가에서 발행한 배관 안내 글입니다.</description>
+    <language>ko-KR</language>
+    <atom:link href="${origin}/rss.xml" rel="self" type="application/rss+xml"/>
+    <item>
+      <title>${xml(item.title)}</title>
+      <link>${xml(item.url)}</link>
+      <guid isPermaLink="true">${xml(item.url)}</guid>
+      <description>${xml(item.html)}</description>
+    </item>
+  </channel>
+</rss>`);
  }
  if(kind==='sitemap'){
   const paths=sitemapPaths(),size=8000,count=Math.ceil(paths.length/size),page=q.page;

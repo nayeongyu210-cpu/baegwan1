@@ -4,6 +4,7 @@
   "rewrites": [
     {"source": "/regions", "destination": "/api/region"},
     {"source": "/regions/:path*", "destination": "/api/region?path=:path*"},
+    {"source": "/rss.xml", "destination": "/api/region?kind=rss"},
     {"source": "/sitemap.xml", "destination": "/api/region?kind=sitemap"},
     {"source": "/sitemaps/regions-:page(\\d+).xml", "destination": "/api/region?kind=sitemap&page=:page"}
   ]
